@@ -1,0 +1,37 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+# =========================================
+# Godot 4.x
+# =========================================
+
+# Archivos de importación (se regeneran solos)
+.import/
+
+# Archivos generados por la importación
+*.import
+
+# Carpeta de caché del editor
+.godot/
+
+# Exportaciones
+export.cfg
+export_presets.cfg
+
+# Archivos temporales
+*.tmp
+
+# Mono / C# (si usas C#)
+.mono/
+data_*/
+*.csproj
+*.sln
+.nuget/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Carpeta de builds/exportaciones (si la usas)
+build/
+dist/
