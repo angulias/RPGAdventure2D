@@ -3,11 +3,30 @@
 [ext_resource type="Texture2D" uid="uid://cc0q6egjxfobw" path="res://assets/Sprites/Actor/Characters/Boy/SeparateAnim/Idle.png" id="1_8afob"]
 [ext_resource type="Script" uid="uid://ddw46kipreaw" path="res://scenes/player/player.gd" id="1_dovo2"]
 [ext_resource type="Texture2D" uid="uid://l58lkiu042xv" path="res://assets/Sprites/Actor/Characters/Shadow.png" id="2_gmlin"]
+[ext_resource type="Texture2D" uid="uid://cif5jmjk1clyv" path="res://assets/Sprites/Actor/Characters/Boy/SeparateAnim/Attack.png" id="3_je7p5"]
 [ext_resource type="Texture2D" uid="uid://bacld8ysircpa" path="res://assets/Sprites/Actor/Characters/Boy/SeparateAnim/Walk.png" id="4_lvxji"]
+[ext_resource type="PackedScene" uid="uid://cp0uuoxa5itpr" path="res://scenes/components/health_component/health_component.tscn" id="5_5gtgg"]
 [ext_resource type="Script" uid="uid://dhsjvn5xbkwrq" path="res://scripts/fsm.gd" id="5_p47bc"]
 [ext_resource type="Script" uid="uid://h5g8nabkh8c6" path="res://scenes/player/states/player_idle_state.gd" id="6_75vfm"]
 [ext_resource type="Script" uid="uid://da7o01tkihi6m" path="res://scenes/player/states/player_walk_state.gd" id="7_0owmy"]
 [ext_resource type="Script" uid="uid://c1g0hj4aslei8" path="res://scenes/player/states/player_attack_state.gd" id="8_qek5x"]
+[ext_resource type="Texture2D" uid="uid://3p8iooj1mo5j" path="res://assets/Sprites/Items/Weapons/Lance/Sprite.png" id="11_fm80t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnsyf"]
+atlas = ExtResource("3_je7p5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_007i1"]
+atlas = ExtResource("3_je7p5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cv16"]
+atlas = ExtResource("3_je7p5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4nxn"]
+atlas = ExtResource("3_je7p5")
+region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dovo2"]
 atlas = ExtResource("1_8afob")
@@ -91,6 +110,38 @@ region = Rect2(16, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7ali8"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnsyf")
+}],
+"loop": 0,
+"name": &"attack_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_007i1")
+}],
+"loop": 0,
+"name": &"attack_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6cv16")
+}],
+"loop": 0,
+"name": &"attack_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4nxn")
+}],
+"loop": 0,
+"name": &"attack_up",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dovo2")
@@ -195,6 +246,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulrax"]
 radius = 7.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ali8"]
+size = Vector2(6, 15)
+
 [node name="Player" type="CharacterBody2D" unique_id=1221665314]
 script = ExtResource("1_dovo2")
 
@@ -215,6 +269,44 @@ shape = SubResource("CircleShape2D_ulrax")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1202507115]
 zoom = Vector2(3, 3)
+
+[node name="Weapon" type="Node2D" parent="." unique_id=359458701]
+visible = false
+position = Vector2(-13, -8)
+
+[node name="Icon" type="Sprite2D" parent="Weapon" unique_id=116443836]
+position = Vector2(0, -11)
+texture = ExtResource("11_fm80t")
+
+[node name="EnemyAttackArea" type="Area2D" parent="Weapon" unique_id=1752359039]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon/EnemyAttackArea" unique_id=373193782]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_7ali8")
+
+[node name="AttackPos" type="Node2D" parent="." unique_id=699415473]
+
+[node name="Down" type="Marker2D" parent="AttackPos" unique_id=1510639792]
+unique_name_in_owner = true
+position = Vector2(-2, 3)
+
+[node name="Left" type="Marker2D" parent="AttackPos" unique_id=1222983860]
+unique_name_in_owner = true
+position = Vector2(-11, -4)
+
+[node name="Right" type="Marker2D" parent="AttackPos" unique_id=1029547285]
+unique_name_in_owner = true
+position = Vector2(11, -4)
+
+[node name="Up" type="Marker2D" parent="AttackPos" unique_id=1295575784]
+unique_name_in_owner = true
+position = Vector2(-3, -19)
+
+[node name="HealthComponent" parent="." unique_id=837659254 instance=ExtResource("5_5gtgg")]
 
 [node name="FiniteStateMachine" type="Node" parent="." unique_id=1140397248]
 script = ExtResource("5_p47bc")
