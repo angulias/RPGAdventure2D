@@ -214,16 +214,17 @@ position = Vector2(0, -7)
 shape = SubResource("CircleShape2D_ulrax")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1202507115]
+zoom = Vector2(3, 3)
 
 [node name="FiniteStateMachine" type="Node" parent="." unique_id=1140397248]
 script = ExtResource("5_p47bc")
-initial_state = NodePath("Idle")
+initial_state = NodePath("IdleState")
 
-[node name="Idle" type="Node" parent="FiniteStateMachine" unique_id=2094765204]
+[node name="IdleState" type="Node" parent="FiniteStateMachine" unique_id=2094765204]
 script = ExtResource("6_75vfm")
 
-[node name="Walk" type="Node" parent="FiniteStateMachine" unique_id=1130928567]
+[node name="WalkState" type="Node" parent="FiniteStateMachine" unique_id=1130928567]
 script = ExtResource("7_0owmy")
 
-[node name="Attack" type="Node" parent="FiniteStateMachine" unique_id=850677017]
+[node name="AttackState" type="Node" parent="FiniteStateMachine" unique_id=850677017]
 script = ExtResource("8_qek5x")
