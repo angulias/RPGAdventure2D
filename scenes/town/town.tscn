@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://cia2cbalqjyso" path="res://assets/Sprites/Bag.png" id="10_svnup"]
 [ext_resource type="Texture2D" uid="uid://mm445ygdhav3" path="res://assets/Sprites/stats.png" id="11_yr8sw"]
 [ext_resource type="Texture2D" uid="uid://xyak03jnq3mj" path="res://assets/Sprites/Rune.png" id="12_w25xm"]
+[ext_resource type="PackedScene" uid="uid://bjs2vis163i" path="res://scenes/ui/equipment_panel/equipement_panel.tscn" id="14_w25xm"]
+[ext_resource type="PackedScene" uid="uid://doioe8rvr0ln8" path="res://scenes/ui/inventory_panel/inventory_panel.tscn" id="14_yr8sw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gxugk"]
 texture = ExtResource("1_n11nm")
@@ -4109,6 +4111,29 @@ grow_vertical = 2
 texture = ExtResource("12_w25xm")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Panels" type="HBoxContainer" parent="HUD" unique_id=108548912]
+custom_minimum_size = Vector2(442, 332)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -466.0
+offset_top = -429.0
+offset_right = -24.0
+offset_bottom = -97.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="EquipmentPanel" parent="HUD/Panels" unique_id=1573777272 instance=ExtResource("14_w25xm")]
+layout_mode = 2
+
+[node name="InventoryPanel" parent="HUD/Panels" unique_id=1070980156 instance=ExtResource("14_yr8sw")]
+visible = false
+layout_mode = 2
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/EquipementButton" to="HUD" method="_on_equipement_button_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/InventoryButton" to="HUD" method="_on_inventory_button_pressed"]
