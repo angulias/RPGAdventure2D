@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://buj1saebduqrb"]
+
+[ext_resource type="Script" uid="uid://cdmdu1u5cm11x" path="res://scenes/ui/stats_panel/stats_panel.gd" id="1_6web6"]
+[ext_resource type="Texture2D" uid="uid://bltswclxeltyo" path="res://assets/Sprites/Plus.png" id="1_il4kf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4fng"]
+bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
+shadow_size = 2
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ali8"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_w25xm"]
+font_size = 14
+
+[sub_resource type="LabelSettings" id="LabelSettings_dmgee"]
+font_size = 13
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os7pw"]
+bg_color = Color(0.23529412, 0.78431374, 0.2901961, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vky2r"]
+bg_color = Color(0.19561929, 0.6236976, 0.2347346, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwdo8"]
+bg_color = Color(0.28917634, 0.9697252, 0.35984528, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="StatsPanel" type="PanelContainer" unique_id=1913658309]
+custom_minimum_size = Vector2(215, 0)
+offset_right = 215.0
+offset_bottom = 332.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b4fng")
+script = ExtResource("1_6web6")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=686555228]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer" unique_id=1434423262]
+layout_mode = 2
+
+[node name="StatsTitle" type="Label" parent="MarginContainer/VBox" unique_id=1295922394]
+layout_mode = 2
+text = "Stats"
+horizontal_alignment = 1
+
+[node name="Separation" type="ColorRect" parent="MarginContainer/VBox" unique_id=1310831583]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.18916395, 0.20777798, 0.25893983, 1)
+
+[node name="Space" type="Control" parent="MarginContainer/VBox" unique_id=2103338926]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=2090873453]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBox" type="HBoxContainer" parent="MarginContainer/VBox/VBox" unique_id=114700548]
+layout_mode = 2
+alignment = 1
+
+[node name="DMGLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox" unique_id=1852213263]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "DMG: 100"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="HPLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox" unique_id=53632827]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "HP: 20"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="HBox2" type="HBoxContainer" parent="MarginContainer/VBox/VBox" unique_id=1628374621]
+layout_mode = 2
+alignment = 1
+
+[node name="VelLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox2" unique_id=1383742086]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "VEL: 80"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="ManaLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox2" unique_id=1033532874]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "MANA: 50"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="HBox3" type="HBoxContainer" parent="MarginContainer/VBox/VBox" unique_id=1699958814]
+layout_mode = 2
+alignment = 1
+
+[node name="CritLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox3" unique_id=797452499]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "CRIT: 15%"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="CritDMGLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox3" unique_id=911064619]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "C. DMG: 20%"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="Separation2" type="ColorRect" parent="MarginContainer/VBox" unique_id=45307248]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(0.18916395, 0.20777798, 0.25893983, 1)
+
+[node name="Space2" type="Control" parent="MarginContainer/VBox" unique_id=607172235]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="CurLevelLabel" type="Label" parent="MarginContainer/VBox" unique_id=1136974409]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Level 5"
+label_settings = SubResource("LabelSettings_w25xm")
+horizontal_alignment = 1
+
+[node name="Space3" type="Control" parent="MarginContainer/VBox" unique_id=457722202]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="CurPointsLabel" type="Label" parent="MarginContainer/VBox" unique_id=733866532]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+text = "Points 4"
+label_settings = SubResource("LabelSettings_dmgee")
+
+[node name="Space4" type="Control" parent="MarginContainer/VBox" unique_id=372040205]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="Attributes" type="VBoxContainer" parent="MarginContainer/VBox" unique_id=972419036]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox/Attributes" unique_id=940189933]
+layout_mode = 2
+
+[node name="StrengthLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer" unique_id=402498753]
+layout_mode = 2
+text = "Strength"
+
+[node name="STRPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer" unique_id=1515994390]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+
+[node name="STRButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer" unique_id=1055857117]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_os7pw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vky2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fwdo8")
+icon = ExtResource("1_il4kf")
+icon_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox/Attributes" unique_id=1656313652]
+layout_mode = 2
+
+[node name="DexterityLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer2" unique_id=1615370571]
+layout_mode = 2
+text = "Dexterity"
+
+[node name="DEXPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer2" unique_id=58524310]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+
+[node name="DEXButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer2" unique_id=482083665]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_os7pw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vky2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fwdo8")
+icon = ExtResource("1_il4kf")
+icon_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBox/Attributes" unique_id=1842411154]
+layout_mode = 2
+
+[node name="IntelligenceLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer3" unique_id=922838801]
+layout_mode = 2
+text = "Intelligence"
+
+[node name="INTPointsLabel" type="Label" parent="MarginContainer/VBox/Attributes/HBoxContainer3" unique_id=439687874]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "1"
+
+[node name="INTButton" type="Button" parent="MarginContainer/VBox/Attributes/HBoxContainer3" unique_id=975483964]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_os7pw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vky2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fwdo8")
+icon = ExtResource("1_il4kf")
+icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer/STRButton" to="." method="_on_str_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer2/DEXButton" to="." method="_on_dex_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBox/Attributes/HBoxContainer3/INTButton" to="." method="_on_int_button_pressed"]
