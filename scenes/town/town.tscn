@@ -4039,6 +4039,7 @@ tile_set = SubResource("TileSet_8b7wv")
 [node name="DropItem" parent="." unique_id=1781397927 instance=ExtResource("20_vky2r")]
 position = Vector2(108, -38)
 item = ExtResource("21_fwdo8")
+amount = 70
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1052973517]
 script = ExtResource("9_svnup")

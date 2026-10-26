@@ -46,6 +46,7 @@ custom_minimum_size = Vector2(0, 3)
 layout_mode = 2
 
 [node name="Container" type="GridContainer" parent="MarginContainer/VBox" unique_id=832379811]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 6
 theme_override_constants/v_separation = 6
@@ -146,7 +147,8 @@ layout_mode = 2
 size_flags_vertical = 10
 alignment = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBox/HBox" unique_id=16007608]
+[node name="GoldLabel" type="Label" parent="MarginContainer/VBox/HBox" unique_id=16007608]
+unique_name_in_owner = true
 layout_mode = 2
 text = "3000"
 

@@ -38,6 +38,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_br05l")
 script = ExtResource("1_igacc")
 
 [node name="ItemIcon" type="TextureRect" parent="." unique_id=1727832005]
+visible = false
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 1
 anchors_preset = 8
@@ -57,6 +58,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="AmountLabel" type="Label" parent="." unique_id=1362925252]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -90,3 +92,7 @@ grow_vertical = 2
 texture = ExtResource("3_fgh1n")
 expand_mode = 1
 stretch_mode = 5
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

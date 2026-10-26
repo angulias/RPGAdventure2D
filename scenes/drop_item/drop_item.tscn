@@ -77,6 +77,8 @@ _data = {
 }
 
 [node name="DropItem" type="Area2D" unique_id=1781397927]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_b85kn")
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=1809202608]
@@ -94,3 +96,5 @@ shape = SubResource("CircleShape2D_7ali8")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1746913146]
 libraries/ = SubResource("AnimationLibrary_ft433")
 autoplay = &"idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
