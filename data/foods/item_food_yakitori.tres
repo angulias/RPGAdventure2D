@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://dls7dagwbaekl"]
 
-[ext_resource type="Texture2D" uid="uid://5v0cup2pt2uq" path="res://assets/Sprites/Items/Food/Sushi.png" id="1_2vxmn"]
+[ext_resource type="Texture2D" uid="uid://cwid15671q3sx" path="res://assets/Sprites/Items/Food/Yakitori.png" id="1_2vxmn"]
 [ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_p6xx1"]
 
 [resource]
 script = ExtResource("2_p6xx1")
 icon = ExtResource("1_2vxmn")
-id = "food_sushi"
-name = "Sushi"
-description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands."
+id = "food_yakitori"
+name = "Yakitori"
+description = "What fare is this, a hasty morsel fit for hungry hands? 'Tis flesh and garden-stuff in fellowship, threaded upon a slender spear, that a man may snatch his strength again ere the sun hath moved a handbreadth in the sky."
 price = 10
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

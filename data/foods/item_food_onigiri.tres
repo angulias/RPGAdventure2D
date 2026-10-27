@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://dk11ns3bu6wtk"]
 
-[ext_resource type="Texture2D" uid="uid://5v0cup2pt2uq" path="res://assets/Sprites/Items/Food/Sushi.png" id="1_7s0nn"]
+[ext_resource type="Texture2D" uid="uid://co5mox4jwutts" path="res://assets/Sprites/Items/Food/Onigiri.png" id="1_7s0nn"]
 [ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_41ojd"]
 
 [resource]
 script = ExtResource("2_41ojd")
 icon = ExtResource("1_7s0nn")
-id = "food_sushi"
-name = "Sushi"
-description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands."
+id = "food_onigiri"
+name = "Onigiri"
+description = "A rice-ball, wrapped in seaweed's dark embrace! In the eastern lands, soldiers are wont to bear such fare among their kit, for it doth keep full long, and may deliver thee from hunger's cruel pinch when no other succour is at hand."
 price = 10
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

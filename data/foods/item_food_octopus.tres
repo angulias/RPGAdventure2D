@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://yiw7w0j7l1vy"]
 
-[ext_resource type="Texture2D" uid="uid://5v0cup2pt2uq" path="res://assets/Sprites/Items/Food/Sushi.png" id="1_d8nx7"]
+[ext_resource type="Texture2D" uid="uid://bl2popqfy8yag" path="res://assets/Sprites/Items/Food/Octopus.png" id="1_d8nx7"]
 [ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_gfpi5"]
 
 [resource]
 script = ExtResource("2_gfpi5")
 icon = ExtResource("1_d8nx7")
-id = "food_sushi"
-name = "Sushi"
-description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands."
-price = 10
+id = "food_octopus"
+name = "Octopus"
+description = "If men should tell me, one day, that this creature were to be eaten and would prove a dainty dish, I would not believe it — yet the octopus is, at the least, scarce and dear among the high-born nobles."
+price = 100
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

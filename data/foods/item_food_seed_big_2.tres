@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://d1lqgjqlc3fm0"]
 
-[ext_resource type="Texture2D" uid="uid://5v0cup2pt2uq" path="res://assets/Sprites/Items/Food/Sushi.png" id="1_8s1qt"]
+[ext_resource type="Texture2D" uid="uid://de5kiyoyw4us6" path="res://assets/Sprites/Items/Food/SeedBig2.png" id="1_8s1qt"]
 [ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_mg3f8"]
 
 [resource]
 script = ExtResource("2_mg3f8")
 icon = ExtResource("1_8s1qt")
-id = "food_sushi"
-name = "Sushi"
-description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands."
+id = "food_seed_big_2"
+name = "Big Flower Seed"
+description = "A seed of some flower — perchance the most pompous and elegant of blooms — is laden with nourishment, that it may germinate with vigour."
 price = 10
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

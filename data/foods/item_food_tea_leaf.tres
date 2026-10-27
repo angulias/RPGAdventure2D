@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://bx7dg3wi68xjn"]
 
-[ext_resource type="Texture2D" uid="uid://5v0cup2pt2uq" path="res://assets/Sprites/Items/Food/Sushi.png" id="1_wrxde"]
+[ext_resource type="Texture2D" uid="uid://choehivpd1o0g" path="res://assets/Sprites/Items/Food/TeaLeaf.png" id="1_wrxde"]
 [ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_ey4xp"]
 
 [resource]
@@ -8,6 +8,6 @@ script = ExtResource("2_ey4xp")
 icon = ExtResource("1_wrxde")
 id = "food_sushi"
 name = "Sushi"
-description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands."
+description = "A leaf of passing savour, whose fragrance doth exceed the common herb, and from its very bosom breathes a sweetness rare and singular — most fit for thee, and for thy cup."
 price = 10
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"
