@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://c3p376v3ukdlc"]
+
+[ext_resource type="Texture2D" uid="uid://dwgd8p57sh0ip" path="res://assets/Sprites/Items/Food/Fish.png" id="1_bipkc"]
+[ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_fwhm0"]
+
+[resource]
+script = ExtResource("2_fwhm0")
+icon = ExtResource("1_bipkc")
+id = "food_fish"
+name = "Fish"
+description = "Fresh fish but newly drawn from out the water, or so at least the scent proclaimeth."
+price = 10
+metadata/_custom_type_script = "uid://bn6wsked7p4yu"

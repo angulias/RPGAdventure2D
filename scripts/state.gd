@@ -6,7 +6,7 @@ var fsm: FiniteStateMachine
 func enter_state() -> void:
 	pass
 
-func process_state(delta: float) -> void:
+func process_state(_delta: float) -> void:
 	pass
 
 func exit_state() -> void:

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://bsik8t1avo7tl"]
+
+[ext_resource type="Texture2D" uid="uid://dh8j3beujlajp" path="res://assets/Sprites/Items/Food/Meat.png" id="1_ljha7"]
+[ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_qs8pk"]
+
+[resource]
+script = ExtResource("2_qs8pk")
+icon = ExtResource("1_ljha7")
+id = "food_meat"
+name = "Meat"
+description = "With this morsel of meat a family might dine the livelong day."
+price = 10
+metadata/_custom_type_script = "uid://bn6wsked7p4yu"

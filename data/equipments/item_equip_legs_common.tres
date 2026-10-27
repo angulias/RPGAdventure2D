@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://cl6tbroqs70nd"]
+
+[ext_resource type="Texture2D" uid="uid://bsnxwd3mhmi24" path="res://assets/Sprites/Equipment/placeholder_legs.png" id="1_8fyi3"]
+[ext_resource type="Script" uid="uid://bmxt2clse8721" path="res://data/equipments/equip_data.gd" id="2_01ylw"]
+
+[resource]
+script = ExtResource("2_01ylw")
+equip_type = 2
+type = 4
+max_stack = 1
+icon = ExtResource("1_8fyi3")
+id = "equip_legs"
+name = "Common Greaves"
+description = "The greaves of a common soldier, these. Not passing fine, yet they shield thee well enow, and ne'er do hobble thee in thy marching."
+price = 20
+metadata/_custom_type_script = "uid://bmxt2clse8721"

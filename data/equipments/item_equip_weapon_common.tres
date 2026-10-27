@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://dlurrmc2wmaau"]
+
+[ext_resource type="Texture2D" uid="uid://bxbwrilmmllpo" path="res://assets/Sprites/Equipment/placeholder_weapon.png" id="1_78w86"]
+[ext_resource type="Script" uid="uid://bmxt2clse8721" path="res://data/equipments/equip_data.gd" id="2_80mqh"]
+
+[resource]
+script = ExtResource("2_80mqh")
+equip_type = 3
+type = 4
+max_stack = 1
+icon = ExtResource("1_78w86")
+id = "equip_weapon"
+name = "Common Weapon"
+description = "Behold the blade a common soldier bears — its edge by long employ hath been notched and worn, yet even in its breaking it remaineth a weapon still."
+price = 20
+metadata/_custom_type_script = "uid://bmxt2clse8721"

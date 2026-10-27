@@ -57,6 +57,11 @@ func use_mana(value: float) -> void:
 	cur_mana = max(cur_mana, 0)
 	EventBus.on_player_mana_updated.emit(cur_mana, max_mana)
 
+func add_mana(value: float) -> void:
+	cur_mana += value
+	cur_mana = min(cur_mana, max_mana)
+	EventBus.on_player_mana_updated.emit(cur_mana, max_mana)
+
 func add_exp(value: float) -> void:
 	cur_exp += value
 	while cur_exp >= next_lvl_exp:
@@ -92,3 +97,11 @@ func update_direction(input_vector: Vector2) -> void:
 
 func play_direction_anim(anim_name: String) -> void:
 	anim_sprit.play("%s_%s" % [anim_name, last_direction])
+
+
+func _on_health_component_on_dead() -> void:
+	queue_free()
+
+
+func _on_health_component_on_health_changed(cur_health: float) -> void:
+	EventBus.on_player_health_updated.emit(cur_health, max_health)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://cruy03njgy02i"]
+
+[ext_resource type="Script" uid="uid://bmxt2clse8721" path="res://data/equipments/equip_data.gd" id="1_bhqf7"]
+[ext_resource type="Texture2D" uid="uid://bf3kx0rce6k0x" path="res://assets/Sprites/Equipment/placeholder_helmet.png" id="1_uqvr7"]
+
+[resource]
+script = ExtResource("1_bhqf7")
+type = 4
+max_stack = 1
+icon = ExtResource("1_uqvr7")
+id = "equip_helmet"
+name = "Common Helmet"
+description = "The common helm of a common soldier — yet whole it standeth still, unbreached by fortune's spite."
+price = 20
+metadata/_custom_type_script = "uid://bmxt2clse8721"

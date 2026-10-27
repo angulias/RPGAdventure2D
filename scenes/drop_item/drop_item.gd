@@ -27,6 +27,6 @@ func shine_item() -> void:
 	shine_tween.tween_property(sprite.material, "shader_parameter/shine_progress", 0.0, 0.0)
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	Inventory.add_item(item, amount)
 	queue_free()

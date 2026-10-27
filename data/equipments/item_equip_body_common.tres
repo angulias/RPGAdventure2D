@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="EquipData" format=3 uid="uid://l5fop4tqyyq4"]
+
+[ext_resource type="Texture2D" uid="uid://gxhpkqg1bdkx" path="res://assets/Sprites/Equipment/placeholder_body.png" id="1_q4o8s"]
+[ext_resource type="Script" uid="uid://bmxt2clse8721" path="res://data/equipments/equip_data.gd" id="2_xkac3"]
+
+[resource]
+script = ExtResource("2_xkac3")
+equip_type = 1
+type = 4
+max_stack = 1
+icon = ExtResource("1_q4o8s")
+id = "equip_body"
+name = "Common Chestplate"
+description = "A common soldier's breastplate, then — no gilded thing, yet 'twill turn aside the blows that else would bruise thy ribs, and that, perchance, is all the armour thou dost need."
+price = 20
+metadata/_custom_type_script = "uid://bmxt2clse8721"

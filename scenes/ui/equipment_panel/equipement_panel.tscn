@@ -57,6 +57,7 @@ layout_mode = 2
 alignment = 1
 
 [node name="HelmetSlot" parent="MarginContainer/VBox/VBoxContainer/Helmet" unique_id=1147078413 instance=ExtResource("1_0e70g")]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Chest" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=609761762]
@@ -64,11 +65,15 @@ layout_mode = 2
 theme_override_constants/separation = 12
 alignment = 1
 
-[node name="SwordSlot" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=2117003058 instance=ExtResource("1_0e70g")]
+[node name="WeaponSlot" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=2117003058 instance=ExtResource("1_0e70g")]
+unique_name_in_owner = true
 layout_mode = 2
+equip_type = 3
 
-[node name="ChestSlot" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=197852281 instance=ExtResource("1_0e70g")]
+[node name="BodySlot" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=197852281 instance=ExtResource("1_0e70g")]
+unique_name_in_owner = true
 layout_mode = 2
+equip_type = 1
 
 [node name="Control" type="Control" parent="MarginContainer/VBox/VBoxContainer/Chest" unique_id=1566694682]
 custom_minimum_size = Vector2(40, 40)
@@ -79,14 +84,18 @@ layout_mode = 2
 alignment = 1
 
 [node name="LegsSlot" parent="MarginContainer/VBox/VBoxContainer/Legs" unique_id=631921923 instance=ExtResource("1_0e70g")]
+unique_name_in_owner = true
 layout_mode = 2
+equip_type = 2
 
 [node name="Ring" type="HBoxContainer" parent="MarginContainer/VBox/VBoxContainer" unique_id=1420550641]
 layout_mode = 2
 alignment = 1
 
 [node name="RingSlot" parent="MarginContainer/VBox/VBoxContainer/Ring" unique_id=1823132529 instance=ExtResource("1_0e70g")]
+unique_name_in_owner = true
 layout_mode = 2
+equip_type = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=1008064630]
 layout_mode = 2

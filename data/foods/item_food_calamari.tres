@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://c4rer1swunv5"]
+
+[ext_resource type="Texture2D" uid="uid://b2q7vh4kmfjm0" path="res://assets/Sprites/Items/Food/Calamari.png" id="1_72v1w"]
+[ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_4c66g"]
+
+[resource]
+script = ExtResource("2_4c66g")
+icon = ExtResource("1_72v1w")
+id = "food_calamari"
+name = "Calamari"
+description = "A morsel of squid in golden batter clad — 'tis a comely sight, and doth promise well upon the tongue."
+price = 10
+metadata/_custom_type_script = "uid://bn6wsked7p4yu"

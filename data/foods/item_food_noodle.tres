@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://b4546gplmd6sh"]
+
+[ext_resource type="Texture2D" uid="uid://c6fwit5phopep" path="res://assets/Sprites/Items/Food/Noodle.png" id="1_f4e6h"]
+[ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_8otxg"]
+
+[resource]
+script = ExtResource("2_8otxg")
+icon = ExtResource("1_f4e6h")
+id = "food_noodle"
+name = "Noodle"
+description = "In sooth, the eastern province doth boast dishes of the strangest humour, and this one men do call by the name of \"Noodles\" — whose outward seeming, methinks, doth foully wrong the sweetness that therein doth dwell."
+price = 10
+metadata/_custom_type_script = "uid://bn6wsked7p4yu"

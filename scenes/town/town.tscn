@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cia2cbalqjyso" path="res://assets/Sprites/Bag.png" id="10_svnup"]
 [ext_resource type="Texture2D" uid="uid://mm445ygdhav3" path="res://assets/Sprites/stats.png" id="11_yr8sw"]
 [ext_resource type="Texture2D" uid="uid://xyak03jnq3mj" path="res://assets/Sprites/Rune.png" id="12_w25xm"]
+[ext_resource type="Resource" uid="uid://ck714sap0jbwa" path="res://data/potions/item_mana_small_5.tres" id="12_wacgc"]
+[ext_resource type="Resource" uid="uid://cruy03njgy02i" path="res://data/equipments/item_equip_helmet_common.tres" id="13_s1uhr"]
 [ext_resource type="PackedScene" uid="uid://cds8t73wd6hnx" path="res://scenes/ui/skills_panel/equipped_skill_button.tscn" id="14_fwvjp"]
 [ext_resource type="PackedScene" uid="uid://bjs2vis163i" path="res://scenes/ui/equipment_panel/equipement_panel.tscn" id="14_w25xm"]
 [ext_resource type="PackedScene" uid="uid://doioe8rvr0ln8" path="res://scenes/ui/inventory_panel/inventory_panel.tscn" id="14_yr8sw"]
@@ -21,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://cuyxj0axuwjqm" path="res://scenes/ui/skills_panel/skills_panel.tscn" id="17_my0xt"]
 [ext_resource type="PackedScene" uid="uid://ms6ia438aedt" path="res://scenes/drop_item/drop_item.tscn" id="20_vky2r"]
 [ext_resource type="Resource" uid="uid://bsqs6k42ughm3" path="res://data/potions/item_hp_small_2.tres" id="21_fwdo8"]
+[ext_resource type="PackedScene" uid="uid://gw3n85iawym3" path="res://scenes/ui/inventory_panel/inventory_slot.tscn" id="22_fwdo8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gxugk"]
 texture = ExtResource("1_n11nm")
@@ -4041,6 +4044,15 @@ position = Vector2(108, -38)
 item = ExtResource("21_fwdo8")
 amount = 70
 
+[node name="DropItem2" parent="." unique_id=1812817044 instance=ExtResource("20_vky2r")]
+position = Vector2(131, -70)
+item = ExtResource("12_wacgc")
+amount = 70
+
+[node name="DropItem3" parent="." unique_id=1308724570 instance=ExtResource("20_vky2r")]
+position = Vector2(119, -111)
+item = ExtResource("13_s1uhr")
+
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1052973517]
 script = ExtResource("9_svnup")
 
@@ -4314,10 +4326,11 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="InventoryPanel" parent="HUD/Panels" unique_id=1070980156 instance=ExtResource("14_yr8sw")]
+[node name="InventoryPanel" parent="HUD/Panels" unique_id=1070980156 node_paths=PackedStringArray("grabbed_slot") instance=ExtResource("14_yr8sw")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+grabbed_slot = NodePath("../../GrabbedSlot")
 
 [node name="StatsPanel" parent="HUD/Panels" unique_id=1913658309 instance=ExtResource("16_dmgee")]
 unique_name_in_owner = true
@@ -4328,6 +4341,15 @@ layout_mode = 2
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+
+[node name="GrabbedSlot" parent="HUD" unique_id=1577412479 instance=ExtResource("22_fwdo8")]
+visible = false
+offset_left = 1039.0
+offset_top = 312.0
+offset_right = 1074.0
+offset_bottom = 347.0
+mouse_filter = 2
+flat = true
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/EquipementButton" to="HUD" method="_on_equipement_button_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/InventoryButton" to="HUD" method="_on_inventory_button_pressed"]

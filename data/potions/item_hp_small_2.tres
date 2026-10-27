@@ -7,7 +7,9 @@
 script = ExtResource("1_24sjb")
 type = 2
 is_consumable = true
+value = 2.0
 icon = ExtResource("1_qh54l")
+id = "hp_potion"
 name = "Potion 2HP"
 description = "The lesser fae have blessed this draught with life, that it might grant thee 2 points of HP."
 price = 5

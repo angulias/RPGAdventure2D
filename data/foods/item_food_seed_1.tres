@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FoodData" format=3 uid="uid://dwb626epe5agj"]
+
+[ext_resource type="Texture2D" uid="uid://5v0cup2pt2uq" path="res://assets/Sprites/Items/Food/Sushi.png" id="1_u1qc1"]
+[ext_resource type="Script" uid="uid://bn6wsked7p4yu" path="res://data/foods/food_data.gd" id="2_2rb86"]
+
+[resource]
+script = ExtResource("2_2rb86")
+icon = ExtResource("1_u1qc1")
+id = "food_sushi"
+name = "Sushi"
+description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands."
+price = 10
+metadata/_custom_type_script = "uid://bn6wsked7p4yu"
