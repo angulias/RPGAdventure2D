@@ -91,10 +91,12 @@ func equip_item(slot_index: int) -> void:
 	var equip_key: String = equip.get_equip_key()
 	
 	#Store current equipped item
-	var current_equipped_item = GameData.equipment[equip_key]
+	var current_equipped_item := GameData.equipment[equip_key]
+	GameData.apply_bonus_equip(current_equipped_item, false)
 	
 	#Equip new Item
 	GameData.equipment[equip_key] = equip
+	GameData.apply_bonus_equip(equip)
 	
 	#Clear inventory slot
 	inventory[slot_index] = null
@@ -117,6 +119,7 @@ func unequip_item(equip_type: EquipData.EquipType) -> void:
 	
 	# Clear equipment slot
 	GameData.equipment[equip_key] = null
+	GameData.apply_bonus_equip(equipped_item, false)
 	
 	on_equipment_changed.emit()
 #endregion

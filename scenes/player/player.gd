@@ -26,6 +26,10 @@ class_name Player
 	"left": %Left
 }
 
+var strength_value: int = 0
+var dexterity_value: int = 0
+var intelligence_value: int = 0
+
 var cur_exp: float
 var next_lvl_exp: float
 
@@ -75,6 +79,42 @@ func level_up() -> void:
 	cur_points += 4
 	next_lvl_exp *= exp_multiplier
 	EventBus.on_player_stats_updated.emit()
+
+func upgrade_stat(stat_name: String) -> void:
+	if cur_points <= 0: return
+	
+	cur_points -= 1
+	match stat_name:
+		"STR":
+			strength_value += 1
+			damage += 1.5
+			max_health += 3.0
+			reset_health()
+		"DEX":
+			dexterity_value += 1
+			move_speed += 2.0
+			crit_chance += 2.0
+		"INT":
+			intelligence_value += 1
+			max_mana += 15.0
+			crit_damage += 5.0
+			reset_mana()
+	
+	EventBus.on_player_stats_updated.emit()
+
+func get_damage(skill_dmg: float = 0.0) -> float:
+	var total_dmg = damage + skill_dmg
+	
+	# Add bonus damage of ezch equipment
+	for equip: EquipData in GameData.equipment.values():
+		if equip:
+			total_dmg += equip.bonus_damage
+	
+	# Check our critical attack
+	if randf() * 100 <= crit_chance:
+		total_dmg *= (1.0 + (crit_damage / 100.0))
+	
+	return total_dmg
 
 func enable_weapon_collision(value: bool) -> void:
 	enemy_area.monitoring = value

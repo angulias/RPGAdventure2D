@@ -17,6 +17,7 @@
 [ext_resource type="Resource" uid="uid://ck714sap0jbwa" path="res://data/potions/item_mana_small_5.tres" id="12_wacgc"]
 [ext_resource type="Resource" uid="uid://cruy03njgy02i" path="res://data/equipments/item_equip_helmet_common.tres" id="13_s1uhr"]
 [ext_resource type="PackedScene" uid="uid://cds8t73wd6hnx" path="res://scenes/ui/skills_panel/equipped_skill_button.tscn" id="14_fwvjp"]
+[ext_resource type="Resource" uid="uid://b5l6ahi5rxrxy" path="res://data/equipments/item_equip_ring_common.tres" id="14_hhop4"]
 [ext_resource type="PackedScene" uid="uid://bjs2vis163i" path="res://scenes/ui/equipment_panel/equipement_panel.tscn" id="14_w25xm"]
 [ext_resource type="PackedScene" uid="uid://doioe8rvr0ln8" path="res://scenes/ui/inventory_panel/inventory_panel.tscn" id="14_yr8sw"]
 [ext_resource type="PackedScene" uid="uid://buj1saebduqrb" path="res://scenes/ui/stats_panel/stats_panel.tscn" id="16_dmgee"]
@@ -4052,6 +4053,10 @@ amount = 70
 [node name="DropItem3" parent="." unique_id=1308724570 instance=ExtResource("20_vky2r")]
 position = Vector2(119, -111)
 item = ExtResource("13_s1uhr")
+
+[node name="DropItem4" parent="." unique_id=2144574251 instance=ExtResource("20_vky2r")]
+position = Vector2(141, -111)
+item = ExtResource("14_hhop4")
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1052973517]
 script = ExtResource("9_svnup")

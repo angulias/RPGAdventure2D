@@ -3,6 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dta4pgpgq5tgu" path="res://scenes/ui/equipment_panel/equipment_slot.tscn" id="1_0e70g"]
 [ext_resource type="Script" uid="uid://bg7b8mm3x8dkc" path="res://scenes/ui/equipment_panel/equipement_panel.gd" id="1_4eg5q"]
 [ext_resource type="Texture2D" uid="uid://b5oevb1lcm4j7" path="res://assets/Sprites/Items/Weapons/Katana/Sprite.png" id="2_meder"]
+[ext_resource type="Texture2D" uid="uid://b2a67gnpasv27" path="res://assets/Sprites/Ui/Receptacle/IconHeart.png" id="4_48i6g"]
+[ext_resource type="Texture2D" uid="uid://cav6bn6nfxs0l" path="res://assets/Sprites/Items/Potion/WaterPot.png" id="5_qyx4o"]
+[ext_resource type="Texture2D" uid="uid://bxc65sl2ptpg3" path="res://assets/Sprites/armor-sheet.png" id="6_57xfr"]
+[ext_resource type="Texture2D" uid="uid://dkugj50a3q0lu" path="res://assets/Sprites/Items/Food/FortuneCookie.png" id="7_qfyk8"]
+[ext_resource type="Texture2D" uid="uid://dsnvxoi14q6d2" path="res://assets/Sprites/FX/SlashFx/SlashDouble/SpriteSheet.png" id="8_3rtfg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4fng"]
 bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
@@ -15,7 +20,15 @@ shadow_size = 2
 shadow_offset = Vector2(4, 4)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7ali8"]
-font_size = 20
+font_size = 15
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulrax"]
+atlas = ExtResource("6_57xfr")
+region = Rect2(100, 8, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_os7pw"]
+atlas = ExtResource("8_3rtfg")
+region = Rect2(32, 0, 32, 32)
 
 [node name="EquipmentPanel" type="PanelContainer" unique_id=1573777272]
 custom_minimum_size = Vector2(215, 0)
@@ -100,17 +113,117 @@ equip_type = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=1008064630]
 layout_mode = 2
 size_flags_vertical = 10
-theme_override_constants/separation = 0
-alignment = 1
+theme_override_constants/separation = 5
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer" unique_id=1337428290]
-custom_minimum_size = Vector2(25, 25)
+[node name="BonusDMGContainer" type="HBoxContainer" parent="MarginContainer/VBox/HBoxContainer" unique_id=1855057448]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer/BonusDMGContainer" unique_id=1337428290]
+custom_minimum_size = Vector2(15, 15)
 layout_mode = 2
 texture = ExtResource("2_meder")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="MarginContainer/VBox/HBoxContainer" unique_id=1977519552]
+[node name="BonusDmg" type="Label" parent="MarginContainer/VBox/HBoxContainer/BonusDMGContainer" unique_id=1977519552]
+unique_name_in_owner = true
+layout_mode = 2
+text = "150"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="BonusHPContainer2" type="HBoxContainer" parent="MarginContainer/VBox/HBoxContainer" unique_id=1925702914]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer/BonusHPContainer2" unique_id=867573557]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = ExtResource("4_48i6g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BonusHP" type="Label" parent="MarginContainer/VBox/HBoxContainer/BonusHPContainer2" unique_id=1376009319]
+unique_name_in_owner = true
+layout_mode = 2
+text = "150"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="BonusManaContainer3" type="HBoxContainer" parent="MarginContainer/VBox/HBoxContainer" unique_id=596515741]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer/BonusManaContainer3" unique_id=1788293536]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = ExtResource("5_qyx4o")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BonusMana" type="Label" parent="MarginContainer/VBox/HBoxContainer/BonusManaContainer3" unique_id=1679167514]
+unique_name_in_owner = true
+layout_mode = 2
+text = "150"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBox" unique_id=1159959366]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_constants/separation = 5
+
+[node name="BonusVelContainer" type="HBoxContainer" parent="MarginContainer/VBox/HBoxContainer2" unique_id=713840904]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer2/BonusVelContainer" unique_id=1622197967]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_ulrax")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BonusVel" type="Label" parent="MarginContainer/VBox/HBoxContainer2/BonusVelContainer" unique_id=889138717]
+unique_name_in_owner = true
+layout_mode = 2
+text = "150"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="BonusCritContainer2" type="HBoxContainer" parent="MarginContainer/VBox/HBoxContainer2" unique_id=2013734301]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer2/BonusCritContainer2" unique_id=883675449]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = ExtResource("7_qfyk8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BonusCrit" type="Label" parent="MarginContainer/VBox/HBoxContainer2/BonusCritContainer2" unique_id=1176233692]
+unique_name_in_owner = true
+layout_mode = 2
+text = "150"
+label_settings = SubResource("LabelSettings_7ali8")
+
+[node name="BonusCDMGContainer3" type="HBoxContainer" parent="MarginContainer/VBox/HBoxContainer2" unique_id=1547559088]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBox/HBoxContainer2/BonusCDMGContainer3" unique_id=1756617639]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = SubResource("AtlasTexture_os7pw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BonusCDmg" type="Label" parent="MarginContainer/VBox/HBoxContainer2/BonusCDMGContainer3" unique_id=1313800740]
+unique_name_in_owner = true
 layout_mode = 2
 text = "150"
 label_settings = SubResource("LabelSettings_7ali8")

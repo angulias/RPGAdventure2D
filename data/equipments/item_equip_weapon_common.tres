@@ -6,6 +6,8 @@
 [resource]
 script = ExtResource("2_80mqh")
 equip_type = 3
+bonus_damage = 10.0
+bonus_crit = 5.0
 type = 4
 max_stack = 1
 icon = ExtResource("1_78w86")
