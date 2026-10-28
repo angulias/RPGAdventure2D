@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_ey4xp")
+is_consumable = true
+value = 1.0
 icon = ExtResource("1_wrxde")
-id = "food_sushi"
+id = "food"
 name = "Sushi"
 description = "A leaf of passing savour, whose fragrance doth exceed the common herb, and from its very bosom breathes a sweetness rare and singular — most fit for thee, and for thy cup."
-price = 10
+price = 1
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_p6xx1")
+is_consumable = true
+value = 18.0
 icon = ExtResource("1_2vxmn")
-id = "food_yakitori"
+id = "food"
 name = "Yakitori"
 description = "What fare is this, a hasty morsel fit for hungry hands? 'Tis flesh and garden-stuff in fellowship, threaded upon a slender spear, that a man may snatch his strength again ere the sun hath moved a handbreadth in the sky."
-price = 10
+price = 12
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

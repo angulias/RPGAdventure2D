@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_qs8pk")
+is_consumable = true
+value = 8.0
 icon = ExtResource("1_ljha7")
-id = "food_meat"
+id = "food"
 name = "Meat"
 description = "With this morsel of meat a family might dine the livelong day."
-price = 10
+price = 5
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

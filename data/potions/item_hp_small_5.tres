@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cih3awb8moy5a"]
+
+[ext_resource type="Texture2D" uid="uid://brbowyharou0c" path="res://assets/Sprites/Items/Potion/LifePot.png" id="1_32bde"]
+[ext_resource type="Script" uid="uid://wkfvdfvt7ar8" path="res://data/item_data.gd" id="2_ftgqd"]
+
+[resource]
+script = ExtResource("2_ftgqd")
+type = 2
+is_consumable = true
+value = 5.0
+icon = ExtResource("1_32bde")
+id = "hp_potion"
+name = "Potion 5HP"
+description = "The lesser fae have blessed this draught with life, that it might grant thee 5 points of HP."
+price = 5
+metadata/_custom_type_script = "uid://wkfvdfvt7ar8"

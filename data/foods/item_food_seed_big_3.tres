@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_jk4na")
+is_consumable = true
+value = 30.0
 icon = ExtResource("1_5koyv")
-id = "food_seed_big_3"
+id = "food"
 name = "Strange Big Seed"
 description = "A seed, most strange and passing great, withal so fraught and richly stored with nourishment, I hold within my hand. What manner of plant should spring therefrom, I know not — yet in the face of such unknowing, perchance 'twere wisest to tread with wary foot."
-price = 10
+price = 20
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

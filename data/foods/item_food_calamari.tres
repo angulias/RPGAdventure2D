@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_4c66g")
+is_consumable = true
+value = 3.0
 icon = ExtResource("1_72v1w")
-id = "food_calamari"
+id = "food"
 name = "Calamari"
 description = "A morsel of squid in golden batter clad — 'tis a comely sight, and doth promise well upon the tongue."
-price = 10
+price = 2
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

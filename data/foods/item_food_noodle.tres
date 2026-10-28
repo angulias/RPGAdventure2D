@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_8otxg")
+is_consumable = true
+value = 6.0
 icon = ExtResource("1_f4e6h")
-id = "food_noodle"
+id = "food"
 name = "Noodle"
 description = "In sooth, the eastern province doth boast dishes of the strangest humour, and this one men do call by the name of \"Noodles\" — whose outward seeming, methinks, doth foully wrong the sweetness that therein doth dwell."
-price = 10
+price = 4
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

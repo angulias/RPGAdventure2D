@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_s1vbq")
+is_consumable = true
+value = 5.0
 icon = ExtResource("1_rujt6")
-id = "food_nut_2"
+id = "food"
 name = "Strange Nut"
 description = "Oft have I marked the walnut tree bestrew these fields, yet such as these mine eyes did ne'er behold."
-price = 10
+price = 5
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

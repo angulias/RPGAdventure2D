@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_jq2md")
+is_consumable = true
+value = 45.0
 icon = ExtResource("1_bs3vx")
-id = "food_seed_large_white"
+id = "food"
 name = "Large Flower Seed"
 description = "That seed which is the sacred germ of a great white bloom, laden and endowed with magic and with nourishment, and a thing of passing wonder to come by — full dearly prized by the high-born."
-price = 10
+price = 30
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_mg3f8")
+is_consumable = true
+value = 18.0
 icon = ExtResource("1_8s1qt")
-id = "food_seed_big_2"
+id = "food"
 name = "Big Flower Seed"
 description = "A seed of some flower — perchance the most pompous and elegant of blooms — is laden with nourishment, that it may germinate with vigour."
-price = 10
+price = 12
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

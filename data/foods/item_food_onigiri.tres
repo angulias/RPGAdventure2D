@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_41ojd")
+is_consumable = true
+value = 22.0
 icon = ExtResource("1_7s0nn")
-id = "food_onigiri"
+id = "food"
 name = "Onigiri"
 description = "A rice-ball, wrapped in seaweed's dark embrace! In the eastern lands, soldiers are wont to bear such fare among their kit, for it doth keep full long, and may deliver thee from hunger's cruel pinch when no other succour is at hand."
-price = 10
+price = 15
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

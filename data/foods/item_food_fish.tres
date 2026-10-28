@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_fwhm0")
+is_consumable = true
+value = 3.0
 icon = ExtResource("1_bipkc")
-id = "food_fish"
+id = "food"
 name = "Fish"
 description = "Fresh fish but newly drawn from out the water, or so at least the scent proclaimeth."
-price = 10
+price = 2
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_gfpi5")
+is_consumable = true
+value = 75.0
 icon = ExtResource("1_d8nx7")
-id = "food_octopus"
+id = "food"
 name = "Octopus"
 description = "If men should tell me, one day, that this creature were to be eaten and would prove a dainty dish, I would not believe it — yet the octopus is, at the least, scarce and dear among the high-born nobles."
-price = 100
+price = 50
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

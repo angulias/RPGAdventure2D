@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_og00l")
+is_consumable = true
+value = 1.0
 icon = ExtResource("1_7aear")
-id = "food_fortune_cookie"
+id = "food"
 name = "Fortune Cookie"
 description = "In a province of the East, 'tis the custom to reveal good fortune by means of one of these fortune-cakes."
-price = 10
+price = 1
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

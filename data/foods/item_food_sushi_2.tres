@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_slu35")
+is_consumable = true
+value = 48.0
 icon = ExtResource("1_85fww")
-id = "food_sushi_2"
+id = "food"
 name = "Especial Sushi"
 description = "A morsel of sushi — a dish as strange as it is exotic, hither borne from the eastern lands. 'Tis fashioned from a fish of rarest choice, and reserved for the high-born alone."
-price = 10
+price = 32
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

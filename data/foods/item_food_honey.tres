@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_cnp1s")
+is_consumable = true
+value = 10.0
 icon = ExtResource("1_uuv1p")
-id = "food_honey"
+id = "food"
 name = "Honey"
 description = "A honeyed jar doth stand before me, and 'tis surely nature's own handiwork — wholesome, fine, and true."
-price = 10
+price = 7
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

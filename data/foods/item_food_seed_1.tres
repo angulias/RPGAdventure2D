@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_2rb86")
+is_consumable = true
+value = 1.0
 icon = ExtResource("1_u1qc1")
-id = "food_seed_1"
+id = "food"
 name = "Tree Seed"
 description = "A seed, most common in seeming, and yet perchance the offspring of some tree whose name I know not."
-price = 10
+price = 1
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"

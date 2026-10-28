@@ -5,8 +5,10 @@
 
 [resource]
 script = ExtResource("2_24alo")
+is_consumable = true
+value = 15.0
 icon = ExtResource("1_x0r0b")
-id = "food_beaf"
+id = "food"
 name = "Beaf"
 description = "A cut of beef, most carefully tended and spiced — 'twill surely stay thy hunger for a goodly while."
 price = 10

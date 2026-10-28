@@ -5,8 +5,10 @@
 
 [resource]
 script = ExtResource("2_cuwos")
+is_consumable = true
+value = 15.0
 icon = ExtResource("1_on8bb")
-id = "food_seed_big_1"
+id = "food"
 name = "Big Tree Seed"
 description = "A seed of some tree, perchance a fruiting one, is laden with rich nourishment, that it might germinate with vigour."
 price = 10

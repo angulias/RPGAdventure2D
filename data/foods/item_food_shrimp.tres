@@ -5,8 +5,10 @@
 
 [resource]
 script = ExtResource("2_6uunh")
+is_consumable = true
+value = 15.0
 icon = ExtResource("1_b324a")
-id = "food_shrimp"
+id = "food"
 name = "Shrimp"
 description = "The shrimp have become a dish most prized by the high-born, and since there are wont to be many of them, they are likewise passing cheap."
 price = 10

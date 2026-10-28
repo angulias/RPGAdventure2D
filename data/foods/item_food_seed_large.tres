@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("2_tla8r")
+is_consumable = true
+value = 37.0
 icon = ExtResource("1_r3hgw")
-id = "food_seed_large"
+id = "food"
 name = "Large Tree Seed"
 description = "A seed most sacred from a mighty tree, with magic fraught and nourishment and pow'r, yet gotten with such ease 'twould seem a wonder."
-price = 10
+price = 25
 metadata/_custom_type_script = "uid://bn6wsked7p4yu"
