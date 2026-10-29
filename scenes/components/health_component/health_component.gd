@@ -11,6 +11,10 @@ func setup(value: float) -> void:
 	max_health = value
 	cur_health = value
 
+func change_max_health(new_health: float) -> void:
+	max_health = new_health
+	on_health_changed.emit(cur_health)
+
 func take_damage(value: float) -> void:
 	if cur_health <= 0:
 		return

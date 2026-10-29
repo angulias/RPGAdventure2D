@@ -26,3 +26,14 @@ func apply_bonus_equip(equip_item: EquipData, equipped: bool = true) -> void:
 	bonus_equipment["speed"] += equip_item.bonus_speed if equipped else -equip_item.bonus_speed
 	bonus_equipment["crit"] += equip_item.bonus_crit if equipped else -equip_item.bonus_crit
 	bonus_equipment["crit_dmg"] += equip_item.bonus_crit_dmg if equipped else -equip_item.bonus_crit_dmg
+	
+	Refs.player.update_total_stats()
+
+func set_color_bonus_label(label_keys: Dictionary[String, Label]) -> void:
+	var equip_bonus: Array[String] = GameData.bonus_equipment.keys()
+	for key in equip_bonus:
+		if label_keys[key]:
+			label_keys[key].label_settings.font_color = GameData.get_color_bonus(key)
+
+func get_color_bonus(stat: String) -> Color:
+	return Color.GREEN if bonus_equipment[stat] > 0.0 else (Color.RED if bonus_equipment[stat] < 0.0 else Color.WHITE)

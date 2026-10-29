@@ -18,7 +18,7 @@
 [ext_resource type="Resource" uid="uid://cruy03njgy02i" path="res://data/equipments/item_equip_helmet_common.tres" id="13_s1uhr"]
 [ext_resource type="PackedScene" uid="uid://cds8t73wd6hnx" path="res://scenes/ui/skills_panel/equipped_skill_button.tscn" id="14_fwvjp"]
 [ext_resource type="Resource" uid="uid://b5l6ahi5rxrxy" path="res://data/equipments/item_equip_ring_common.tres" id="14_hhop4"]
-[ext_resource type="PackedScene" uid="uid://bjs2vis163i" path="res://scenes/ui/equipment_panel/equipement_panel.tscn" id="14_w25xm"]
+[ext_resource type="PackedScene" uid="uid://bjs2vis163i" path="res://scenes/ui/equipment_panel/equipment_panel.tscn" id="14_w25xm"]
 [ext_resource type="PackedScene" uid="uid://doioe8rvr0ln8" path="res://scenes/ui/inventory_panel/inventory_panel.tscn" id="14_yr8sw"]
 [ext_resource type="PackedScene" uid="uid://buj1saebduqrb" path="res://scenes/ui/stats_panel/stats_panel.tscn" id="16_dmgee"]
 [ext_resource type="PackedScene" uid="uid://cuyxj0axuwjqm" path="res://scenes/ui/skills_panel/skills_panel.tscn" id="17_my0xt"]

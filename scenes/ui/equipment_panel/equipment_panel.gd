@@ -16,6 +16,15 @@ class_name EquipmentPanel
 @onready var bonus_crit: Label = %BonusCrit
 @onready var bonus_c_dmg: Label = %BonusCDmg
 
+@onready var label_keys: Dictionary[String, Label] = {
+	"dmg": bonus_dmg,
+	"hp": bonus_hp,
+	"mana": bonus_mana,
+	"speed": bonus_vel,
+	"crit": bonus_crit,
+	"crit_dmg": bonus_c_dmg
+}
+
 func _ready() -> void:
 	Inventory.on_equipment_changed.connect(_on_equipment_changed)
 	for slot: EquipmentSlot in slots:
@@ -30,6 +39,8 @@ func update_bonus_equip() -> void:
 	bonus_vel.text = "%d" % GameData.bonus_equipment["speed"]
 	bonus_crit.text = "%d" % GameData.bonus_equipment["crit"]
 	bonus_c_dmg.text = "%d" % GameData.bonus_equipment["crit_dmg"]
+	
+	GameData.set_color_bonus_label(label_keys)
 
 func _on_player_created() -> void:
 	update_bonus_equip()

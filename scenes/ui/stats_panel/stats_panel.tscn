@@ -13,6 +13,21 @@ shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
 shadow_size = 2
 shadow_offset = Vector2(4, 4)
 
+[sub_resource type="LabelSettings" id="LabelSettings_6web6"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_q48ib"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_km6jy"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_h4xlr"]
+font_size = 13
+
+[sub_resource type="LabelSettings" id="LabelSettings_wguq6"]
+font_size = 13
+
 [sub_resource type="LabelSettings" id="LabelSettings_7ali8"]
 font_size = 13
 
@@ -87,14 +102,14 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 text = "DMG: 100"
-label_settings = SubResource("LabelSettings_7ali8")
+label_settings = SubResource("LabelSettings_6web6")
 
 [node name="HPLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox" unique_id=53632827]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 text = "HP: 20"
-label_settings = SubResource("LabelSettings_7ali8")
+label_settings = SubResource("LabelSettings_q48ib")
 
 [node name="HBox2" type="HBoxContainer" parent="MarginContainer/VBox/VBox" unique_id=1628374621]
 layout_mode = 2
@@ -105,14 +120,14 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 text = "VEL: 80"
-label_settings = SubResource("LabelSettings_7ali8")
+label_settings = SubResource("LabelSettings_km6jy")
 
 [node name="ManaLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox2" unique_id=1033532874]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 text = "MANA: 50"
-label_settings = SubResource("LabelSettings_7ali8")
+label_settings = SubResource("LabelSettings_h4xlr")
 
 [node name="HBox3" type="HBoxContainer" parent="MarginContainer/VBox/VBox" unique_id=1699958814]
 layout_mode = 2
@@ -123,7 +138,7 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 text = "CRIT: 15%"
-label_settings = SubResource("LabelSettings_7ali8")
+label_settings = SubResource("LabelSettings_wguq6")
 
 [node name="CritDMGLabel" type="Label" parent="MarginContainer/VBox/VBox/HBox3" unique_id=911064619]
 unique_name_in_owner = true

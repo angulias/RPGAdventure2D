@@ -15,19 +15,30 @@ class_name StatsPanel
 @onready var dex_points_label: Label = %DEXPointsLabel
 @onready var int_points_label: Label = %INTPointsLabel
 
+@onready var label_keys: Dictionary[String, Label] = {
+	"dmg": dmg_label,
+	"hp": hp_label,
+	"mana": mana_label,
+	"speed": vel_label,
+	"crit": crit_label,
+	"crit_dmg": crit_dmg_label
+}
+
 func _ready() -> void:
 	EventBus.on_player_created.connect(_on_player_created)
 	EventBus.on_player_stats_updated.connect(_on_player_stats_updated)
+	Inventory.on_equipment_changed.connect(_on_equipment_changed)
+	
 
 func update_stats() -> void:
 	if not is_instance_valid(Refs.player):
 		return
-	dmg_label.text = "DMG: %s" % str(Refs.player.damage)
-	hp_label.text = "HP: %s" % str(Refs.player.max_health)
-	vel_label.text = "VEL: %s" % str(Refs.player.move_speed)
-	mana_label.text = "Mana: %s" % str(Refs.player.max_mana)
-	crit_label.text = "CRIT: %s" % str(Refs.player.crit_chance)
-	crit_dmg_label.text = "C. DMG: %s" % str(Refs.player.crit_damage)
+	dmg_label.text = "DMG: %s" % str(Refs.player.total_damage)
+	hp_label.text = "HP: %s" % str(Refs.player.total_max_health)
+	vel_label.text = "VEL: %s" % str(Refs.player.total_move_speed)
+	mana_label.text = "Mana: %s" % str(Refs.player.total_max_mana)
+	crit_label.text = "CRIT: %s" % str(Refs.player.total_crit_chance)
+	crit_dmg_label.text = "C. DMG: %s" % str(Refs.player.total_crit_damage)
 	
 	cur_level_label.text = "Level: %s" % str(Refs.player.cur_lvl)
 	cur_points_label.text = "Points: %s" % str(Refs.player.cur_points)
@@ -35,11 +46,16 @@ func update_stats() -> void:
 	str_points_label.text = str(Refs.player.strength_value)
 	dex_points_label.text = str(Refs.player.dexterity_value)
 	int_points_label.text = str(Refs.player.intelligence_value)
+	
+	GameData.set_color_bonus_label(label_keys)
 
 func _on_player_created() -> void:
 	update_stats()
 
 func _on_player_stats_updated() -> void:
+	update_stats()
+
+func _on_equipment_changed() -> void:
 	update_stats()
 
 func _on_str_button_pressed() -> void:
