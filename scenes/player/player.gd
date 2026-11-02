@@ -86,6 +86,8 @@ func level_up() -> void:
 	cur_lvl += 1
 	cur_points += 4
 	next_lvl_exp *= exp_multiplier
+	# Correction for the anim_sptrite in the "y" axis
+	Refs.create_new_level_fx(Vector2(global_position.x, global_position.y - 8.0))
 	EventBus.on_player_stats_updated.emit()
 
 func upgrade_stat(stat_name: String) -> void:

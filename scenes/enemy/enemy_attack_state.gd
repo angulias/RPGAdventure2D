@@ -28,3 +28,5 @@ func apply_damage() -> void:
 	
 	if dist <= 25.0:
 		Refs.player.health_component.take_damage(enemy.damage)
+		Refs.create_damage_fx(Refs.player.global_position)
+		Refs.create_damage_text(Refs.player.global_position, enemy.damage)
