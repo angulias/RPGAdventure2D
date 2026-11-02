@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cj377vjqyeaip"]
+
+[node name="DamageFX" type="AnimatedSprite2D" unique_id=1149951723]

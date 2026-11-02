@@ -158,7 +158,6 @@ func update_direction(input_vector: Vector2) -> void:
 func play_direction_anim(anim_name: String) -> void:
 	anim_sprit.play("%s_%s" % [anim_name, last_direction])
 
-
 func _on_health_component_on_dead() -> void:
 	queue_free()
 
