@@ -46,6 +46,14 @@ var total_damage: float
 var total_crit_chance: float
 var total_crit_damage: float
 
+var selected_enemy: Enemy:
+	set(value):
+		if selected_enemy:
+			selected_enemy.deselect_enemy()
+		
+		selected_enemy = value
+		selected_enemy.select_enemy()
+
 func _process(delta: float) -> void:
 	if fsm.cur_state:
 		fsm.cur_state.process_state(delta)
@@ -165,3 +173,10 @@ func _on_health_component_on_dead() -> void:
 
 func _on_health_component_on_health_changed(cur_health: float) -> void:
 	EventBus.on_player_health_updated.emit(cur_health, total_max_health)
+
+
+func _on_enemy_attack_area_area_entered(area: Area2D) -> void:
+	var dmg = get_damage()
+	area.health_component.take_damage(dmg)
+	Refs.create_damage_fx(area.global_position)
+	Refs.create_damage_text(area.global_position, dmg)

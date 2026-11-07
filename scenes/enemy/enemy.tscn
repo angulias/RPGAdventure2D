@@ -3,12 +3,28 @@
 [ext_resource type="Texture2D" uid="uid://dmwuj01b4ll4n" path="res://assets/Sprites/Actor/Monsters/Mouse/SpriteSheet.png" id="1_4a83h"]
 [ext_resource type="Texture2D" uid="uid://l58lkiu042xv" path="res://assets/Sprites/Actor/Characters/Shadow.png" id="1_a3pup"]
 [ext_resource type="Script" uid="uid://bv886jjf1wfaj" path="res://scenes/enemy/enemy.gd" id="1_gl05p"]
+[ext_resource type="Script" uid="uid://d0m76gn1uyusi" path="res://data/loot_data.gd" id="2_2f3il"]
 [ext_resource type="Texture2D" uid="uid://b25swkh2ytg3p" path="res://assets/Sprites/Selector.png" id="3_40wdo"]
+[ext_resource type="Resource" uid="uid://bsqs6k42ughm3" path="res://data/potions/item_hp_small_2.tres" id="3_dtxhd"]
+[ext_resource type="Resource" uid="uid://bsik8t1avo7tl" path="res://data/foods/item_food_meat.tres" id="4_so3kp"]
 [ext_resource type="PackedScene" uid="uid://cp0uuoxa5itpr" path="res://scenes/components/health_component/health_component.tscn" id="4_tjssy"]
 [ext_resource type="Script" uid="uid://dhsjvn5xbkwrq" path="res://scripts/fsm.gd" id="6_nbhyu"]
 [ext_resource type="Script" uid="uid://dqbe7muwcmyf8" path="res://scenes/enemy/states/enemy_wander_state.gd" id="7_13gj6"]
 [ext_resource type="Script" uid="uid://bbxgs0888l5e3" path="res://scenes/enemy/enemy_follow_state.gd" id="8_13gj6"]
 [ext_resource type="Script" uid="uid://cogdv5u40gliy" path="res://scenes/enemy/enemy_attack_state.gd" id="9_4efjx"]
+
+[sub_resource type="Resource" id="Resource_4efjx"]
+script = ExtResource("2_2f3il")
+item = ExtResource("3_dtxhd")
+max_amount = 5
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="Resource" id="Resource_hvxgb"]
+script = ExtResource("2_2f3il")
+item = ExtResource("4_so3kp")
+min_amount = 2
+max_amount = 2
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40wdo"]
 atlas = ExtResource("1_4a83h")
@@ -151,9 +167,29 @@ radius = 8.062258
 [sub_resource type="CircleShape2D" id="CircleShape2D_ulrax"]
 radius = 35.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ali8"]
+bg_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ulrax"]
+bg_color = Color(0.77254903, 0.11372549, 0.105882354, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.25882354, 0.05882353, 0.011764706, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
 [node name="Enemy" type="Area2D" unique_id=1203023519]
 collision_layer = 4
 script = ExtResource("1_gl05p")
+loot = Array[ExtResource("2_2f3il")]([SubResource("Resource_4efjx"), SubResource("Resource_hvxgb")])
 
 [node name="Shadow" type="Sprite2D" parent="." unique_id=951587644]
 self_modulate = Color(1, 1, 1, 0.19607843)
@@ -184,6 +220,19 @@ position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_ulrax")
 debug_color = Color(0.90588236, 0.28235295, 0.29803923, 0.19607843)
 
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=1073574517]
+custom_minimum_size = Vector2(20, 5)
+offset_left = -10.0
+offset_top = -24.0
+offset_right = 10.0
+offset_bottom = -19.0
+theme_override_styles/background = SubResource("StyleBoxFlat_7ali8")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ulrax")
+max_value = 1.0
+step = 0.001
+value = 1.0
+show_percentage = false
+
 [node name="HealthComponent" parent="." unique_id=837659254 instance=ExtResource("4_tjssy")]
 
 [node name="FiniteStateMachine" type="Node" parent="." unique_id=714796407]
@@ -199,5 +248,8 @@ script = ExtResource("8_13gj6")
 [node name="AttackState" type="Node" parent="FiniteStateMachine" unique_id=1535355076]
 script = ExtResource("9_4efjx")
 
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="body_entered" from="DetectArea" to="." method="_on_detect_area_body_entered"]
 [connection signal="body_exited" from="DetectArea" to="." method="_on_detect_area_body_exited"]
+[connection signal="on_dead" from="HealthComponent" to="." method="_on_health_component_on_dead"]
+[connection signal="on_health_changed" from="HealthComponent" to="." method="_on_health_component_on_health_changed"]

@@ -10,8 +10,9 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		Refs.player.use_mana(1.0)
-		Refs.player.add_exp(60)
+		#Refs.player.use_mana(1.0)
+		#Refs.player.add_exp(60)
+		return
 
 func create_player() -> void:
 	var player: Player = player_scene.instantiate()

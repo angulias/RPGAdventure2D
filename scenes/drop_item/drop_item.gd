@@ -17,9 +17,12 @@ func setup() -> void:
 	if item and item.icon:
 		sprite.texture = item.icon
 
-func load_item(data: SlotData) -> void:
+func load_item(data: LootData, drop_amount: int = 0) -> void:
 	item = data.item
-	amount = data.quantity
+	if drop_amount == 0:
+		amount = data.min_amount
+	else:
+		amount = drop_amount
 
 func shine_item() -> void:
 	var shine_tween := create_tween().set_loops()
