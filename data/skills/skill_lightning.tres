@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://51gwssiubaib"]
+
+[ext_resource type="Texture2D" uid="uid://slwd0q3tfneh" path="res://assets/Sprites/Ui/Skill Icon/Spell/BookThunder.png" id="1_7ondu"]
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_do8sf"]
+
+[resource]
+script = ExtResource("2_do8sf")
+mana_cost = 3.0
+base_damage = 2.6
+icon = ExtResource("1_7ondu")
+id = "lightning"
+name = "Lightning"
+description = "When one doth wake unto the magic power, one is able to command the elements at will. The wrath of heaven in its fullest measure — a lightning bolt of light followed by a shockwave that felleth any who standeth in its path. Most effective, above all, upon those foes who bear them in metal armour... wherefore, I know not."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"

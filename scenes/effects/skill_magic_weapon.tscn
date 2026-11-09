@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bd62nkvs7m44y"]
+
+[ext_resource type="PackedScene" uid="uid://vxep2wsxnjdn" path="res://scenes/effects/skill_kunai.tscn" id="1_q7iwh"]
+[ext_resource type="Texture2D" uid="uid://6do5ieg1yhl4" path="res://assets/Sprites/FX/Magic/Boost/SpriteSheet.png" id="2_qgpkc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80q11"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(0, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7xsl"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(53, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_871uw"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(106, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d8fw"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(159, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fgyd"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(212, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqb62"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(265, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsdol"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(318, 0, 53, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkhlu"]
+atlas = ExtResource("2_qgpkc")
+region = Rect2(371, 0, 53, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0me0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80q11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7xsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_871uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2d8fw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fgyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqb62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsdol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkhlu")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="SkillMagicWeapon" unique_id=1215751320 instance=ExtResource("1_q7iwh")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1997288462]
+sprite_frames = SubResource("SpriteFrames_r0me0")

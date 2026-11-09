@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://2b0p6p5r6kqk"]
+
+[ext_resource type="Texture2D" uid="uid://de2d7ac1yxjun" path="res://assets/Sprites/Ui/Skill Icon/Spell/MagicWeapon.png" id="1_jn5gb"]
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_bx87y"]
+
+[resource]
+script = ExtResource("2_bx87y")
+mana_cost = 2.0
+icon = ExtResource("1_jn5gb")
+id = "magic_weapon"
+name = "Magic Weapon"
+description = "The definitive art of the magic warriors: to imbue a weapon with sorcery is to grant it enlarged effects of its own native powers. Commonly, by endowing the blade with far greater might than it possessed afore."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"

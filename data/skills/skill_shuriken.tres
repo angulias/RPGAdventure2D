@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://1pqj4deq5phx"]
+
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="1_8d4ly"]
+[ext_resource type="Texture2D" uid="uid://qjsmi71b0p78" path="res://assets/Sprites/Ui/Skill Icon/Items & Weapon/Shuriken.png" id="1_p1w43"]
+
+[resource]
+script = ExtResource("1_8d4ly")
+mana_cost = 2.0
+base_damage = 3.0
+icon = ExtResource("1_p1w43")
+id = "shuriken"
+name = "Shuriken"
+description = "A skill inherited by a clan of the warriors of the east, yclept the shuriken. 'Tis not of mighty puissance, yet ne'er had they need that it should be..."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"

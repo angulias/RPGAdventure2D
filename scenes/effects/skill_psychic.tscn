@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://ck58liakx53mq"]
+
+[ext_resource type="PackedScene" uid="uid://vxep2wsxnjdn" path="res://scenes/effects/skill_kunai.tscn" id="1_jy3gk"]
+[ext_resource type="Texture2D" uid="uid://yfsc5wabw6nc" path="res://assets/Sprites/FX/Elemental/Rock/SpriteSheet.png" id="2_d4pyq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2c7uy"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(0, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_isd1g"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(30, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t53hj"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(60, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogyew"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(90, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5gct"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(120, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qgd7"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(150, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_levpy"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(180, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_528pm"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(210, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r8yx"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(240, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgmge"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(270, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2m5vv"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(300, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwvf0"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(330, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h76mv"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(360, 0, 30, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mkwnl"]
+atlas = ExtResource("2_d4pyq")
+region = Rect2(390, 0, 30, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y11rx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2c7uy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_isd1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t53hj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogyew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5gct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qgd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_levpy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_528pm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r8yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgmge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2m5vv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwvf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h76mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mkwnl")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="SkillPsychic" unique_id=1215751320 instance=ExtResource("1_jy3gk")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1997288462]
+sprite_frames = SubResource("SpriteFrames_y11rx")

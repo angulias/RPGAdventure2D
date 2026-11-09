@@ -45,7 +45,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_uggle")
 script = ExtResource("1_uggle")
 
 [node name="SkillIcon" type="TextureRect" parent="." unique_id=472417521]
-self_modulate = Color(0.47007608, 0.47007573, 0.47007596, 1)
+self_modulate = Color(0.47058824, 0.47058824, 0.47058824, 1)
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 1
 anchors_preset = 8

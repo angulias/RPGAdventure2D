@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://sy0vbihbefcp"]
+
+[ext_resource type="Texture2D" uid="uid://qih0hma7my5e" path="res://assets/Sprites/Ui/Skill Icon/Spell/WaterCanon.png" id="1_4l1nx"]
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_rnptu"]
+
+[resource]
+script = ExtResource("2_rnptu")
+mana_cost = 3.0
+base_damage = 2.4
+icon = ExtResource("1_4l1nx")
+id = "water_canon"
+name = "Water Canon"
+description = "When one doth wake unto the magic power, one is able to command the elements at will. The magic of water is the most versatile of magics, both to create and to destroy. A torrent of water that tears even the flesh from whosoever stands before it, in the most savage way possible."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"

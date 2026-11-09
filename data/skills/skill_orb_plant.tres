@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://drwivwj1375r7"]
+
+[ext_resource type="Texture2D" uid="uid://bjxem4vjr68t8" path="res://assets/Sprites/Ui/Skill Icon/Spell/OrbPlant.png" id="1_a14w6"]
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_sivbm"]
+
+[resource]
+script = ExtResource("2_sivbm")
+mana_cost = 1.35
+base_damage = 2.0
+icon = ExtResource("1_a14w6")
+id = "orb_plant"
+name = "Orb Plant"
+description = "When one doth wake unto the magic power, one is able to command the elements at will. Let any foe suppose that nature's magic is, in sooth, a harmless thing... and for that very cause it serveth me so well."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"

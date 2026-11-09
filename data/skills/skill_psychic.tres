@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bgngqenaiwcb6"]
+
+[ext_resource type="Texture2D" uid="uid://cu6gqrp2rtvi1" path="res://assets/Sprites/Ui/Skill Icon/Spell/Alchemy.png" id="1_q34nb"]
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_wbvc1"]
+
+[resource]
+script = ExtResource("2_wbvc1")
+mana_cost = 1.5
+base_damage = 2.0
+icon = ExtResource("1_q34nb")
+id = "psychic"
+name = "Psychic"
+description = "When one doth wake unto the magic power, one is able to command the elements at will. Ofttimes confounded with the power within, the magic of the void, the magic capable of commanding the motion and the space of an object. A magic too mysterious to be understood in its completeness."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"

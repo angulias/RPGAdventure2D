@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://oxlma4cjj68k"]
+
+[ext_resource type="Texture2D" uid="uid://dniqflihccv72" path="res://assets/Sprites/Ui/Skill Icon/Spell/RockSpike.png" id="1_qljsl"]
+[ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_l3nhy"]
+
+[resource]
+script = ExtResource("2_l3nhy")
+mana_cost = 3.5
+base_damage = 3.0
+icon = ExtResource("1_qljsl")
+id = "rock_spike"
+name = "Rock Spike"
+description = "When one doth wake unto the magic power, one is able to command the elements at will. The first time the magic of earth was used in a contest, the user who cast it split the earth in two. Both enemies and allies were obliterated, and from then on, its use as a strategic weapon was systematically forbidden."
+price = 50
+metadata/_custom_type_script = "uid://dtclsyiojdv7w"
