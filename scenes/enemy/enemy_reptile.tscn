@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://c1oganxyhwad2"]
+
+[ext_resource type="PackedScene" uid="uid://casmicpqro64k" path="res://scenes/enemy/enemy_mouse.tscn" id="1_uv0r3"]
+[ext_resource type="Texture2D" uid="uid://dra07gisd14n5" path="res://assets/Sprites/Actor/Monsters/Reptile/Reptile.png" id="2_2ionn"]
+[ext_resource type="Script" uid="uid://d0m76gn1uyusi" path="res://data/loot_data.gd" id="2_6vgwv"]
+[ext_resource type="Resource" uid="uid://l5fop4tqyyq4" path="res://data/equipments/item_equip_body_common.tres" id="3_ducaa"]
+[ext_resource type="Resource" uid="uid://cl6tbroqs70nd" path="res://data/equipments/item_equip_legs_common.tres" id="4_5e32e"]
+[ext_resource type="Resource" uid="uid://cih3awb8moy5a" path="res://data/potions/item_hp_small_5.tres" id="5_qtcyu"]
+[ext_resource type="Resource" uid="uid://crert4lgoeba6" path="res://data/foods/item_food_beaf.tres" id="6_tsykv"]
+
+[sub_resource type="Resource" id="Resource_wgryj"]
+script = ExtResource("2_6vgwv")
+item = ExtResource("3_ducaa")
+max_amount = 1
+drop_chance = 0.35
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="Resource" id="Resource_g5fc6"]
+script = ExtResource("2_6vgwv")
+item = ExtResource("4_5e32e")
+max_amount = 1
+drop_chance = 0.15
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="Resource" id="Resource_m687a"]
+script = ExtResource("2_6vgwv")
+item = ExtResource("5_qtcyu")
+min_amount = 2
+max_amount = 5
+drop_chance = 0.7
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="Resource" id="Resource_4kndx"]
+script = ExtResource("2_6vgwv")
+item = ExtResource("6_tsykv")
+max_amount = 2
+drop_chance = 0.2
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ev4e"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b10p3"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q74qm"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vgwv"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ducaa"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5e32e"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtcyu"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsykv"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgryj"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5fc6"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m687a"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kndx"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feam8"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx650"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meoqr"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxk0a"]
+atlas = ExtResource("2_2ionn")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31fth"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ev4e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b10p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q74qm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vgwv")
+}],
+"loop": 1,
+"name": &"move_down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ducaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5e32e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtcyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tsykv")
+}],
+"loop": 1,
+"name": &"move_left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgryj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5fc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m687a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kndx")
+}],
+"loop": 1,
+"name": &"move_right",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feam8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx650")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_meoqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxk0a")
+}],
+"loop": 1,
+"name": &"move_up",
+"speed": 6.0
+}]
+
+[node name="EnemyReptile" unique_id=1203023519 instance=ExtResource("1_uv0r3")]
+max_health = 80.0
+damage = 10.0
+exp_amount = 120.0
+loot = Array[ExtResource("2_6vgwv")]([SubResource("Resource_wgryj"), SubResource("Resource_g5fc6"), SubResource("Resource_m687a"), SubResource("Resource_4kndx")])
+
+[node name="AnimSprite" parent="." index="1" unique_id=17510422]
+sprite_frames = SubResource("SpriteFrames_31fth")
+animation = &"move_up"
+
+[node name="WanderState" parent="FiniteStateMachine" parent_id_path=PackedInt32Array(714796407) index="0" unique_id=1759432846]
+min_move_speed = 30.0
+max_move_speed = 35.0
+
+[node name="FollowState" parent="FiniteStateMachine" parent_id_path=PackedInt32Array(714796407) index="1" unique_id=367896654]
+min_move_speed = 50.0
+max_move_speed = 60.0
+
+[node name="AttackState" parent="FiniteStateMachine" parent_id_path=PackedInt32Array(714796407) index="2" unique_id=1535355076]
+attack_duration = 1.0

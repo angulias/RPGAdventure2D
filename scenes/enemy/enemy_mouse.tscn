@@ -10,13 +10,14 @@
 [ext_resource type="PackedScene" uid="uid://cp0uuoxa5itpr" path="res://scenes/components/health_component/health_component.tscn" id="4_tjssy"]
 [ext_resource type="Script" uid="uid://dhsjvn5xbkwrq" path="res://scripts/fsm.gd" id="6_nbhyu"]
 [ext_resource type="Script" uid="uid://dqbe7muwcmyf8" path="res://scenes/enemy/states/enemy_wander_state.gd" id="7_13gj6"]
-[ext_resource type="Script" uid="uid://bbxgs0888l5e3" path="res://scenes/enemy/enemy_follow_state.gd" id="8_13gj6"]
-[ext_resource type="Script" uid="uid://cogdv5u40gliy" path="res://scenes/enemy/enemy_attack_state.gd" id="9_4efjx"]
+[ext_resource type="Script" uid="uid://bbxgs0888l5e3" path="res://scenes/enemy/states/enemy_follow_state.gd" id="8_13gj6"]
+[ext_resource type="Script" uid="uid://cogdv5u40gliy" path="res://scenes/enemy/states/enemy_attack_state.gd" id="9_4efjx"]
 
 [sub_resource type="Resource" id="Resource_4efjx"]
 script = ExtResource("2_2f3il")
 item = ExtResource("3_dtxhd")
 max_amount = 5
+drop_chance = 0.25
 metadata/_custom_type_script = "uid://d0m76gn1uyusi"
 
 [sub_resource type="Resource" id="Resource_hvxgb"]
@@ -24,6 +25,7 @@ script = ExtResource("2_2f3il")
 item = ExtResource("4_so3kp")
 min_amount = 2
 max_amount = 2
+drop_chance = 0.15
 metadata/_custom_type_script = "uid://d0m76gn1uyusi"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_40wdo"]
@@ -186,7 +188,7 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[node name="Enemy" type="Area2D" unique_id=1203023519]
+[node name="EnemyMouse" type="Area2D" unique_id=1203023519]
 collision_layer = 4
 script = ExtResource("1_gl05p")
 loot = Array[ExtResource("2_2f3il")]([SubResource("Resource_4efjx"), SubResource("Resource_hvxgb")])
@@ -200,6 +202,7 @@ texture = ExtResource("1_a3pup")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_7ali8")
 animation = &"move_down"
+autoplay = "move_down"
 
 [node name="Selector" type="Sprite2D" parent="." unique_id=1374322428]
 visible = false

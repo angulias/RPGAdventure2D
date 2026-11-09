@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://oe65bewt8asc"]
+
+[ext_resource type="PackedScene" uid="uid://casmicpqro64k" path="res://scenes/enemy/enemy_mouse.tscn" id="1_syrvq"]
+[ext_resource type="Script" uid="uid://d0m76gn1uyusi" path="res://data/loot_data.gd" id="2_r02w8"]
+[ext_resource type="Resource" uid="uid://b5l6ahi5rxrxy" path="res://data/equipments/item_equip_ring_common.tres" id="3_h65i5"]
+[ext_resource type="Resource" uid="uid://cih3awb8moy5a" path="res://data/potions/item_hp_small_5.tres" id="4_5h82c"]
+[ext_resource type="Resource" uid="uid://ck714sap0jbwa" path="res://data/potions/item_mana_small_5.tres" id="5_kp6da"]
+[ext_resource type="Texture2D" uid="uid://bhtpa4ojq5bor" path="res://assets/Sprites/Actor/Monsters/Dragon/SpriteSheet.png" id="6_g4bpp"]
+
+[sub_resource type="Resource" id="Resource_se0vk"]
+script = ExtResource("2_r02w8")
+item = ExtResource("3_h65i5")
+max_amount = 1
+drop_chance = 0.1
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="Resource" id="Resource_febvj"]
+script = ExtResource("2_r02w8")
+item = ExtResource("4_5h82c")
+max_amount = 5
+drop_chance = 0.25
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="Resource" id="Resource_67633"]
+script = ExtResource("2_r02w8")
+item = ExtResource("5_kp6da")
+max_amount = 2
+drop_chance = 0.4
+metadata/_custom_type_script = "uid://d0m76gn1uyusi"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p54i"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjy15"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5dvq"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5clo"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iejmv"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhiud"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a4d6j"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ak7ti"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d1ik"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgdd1"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w31ia"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fa3o"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu1nd"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lls8s"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dor8w"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1nqk"]
+atlas = ExtResource("6_g4bpp")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3xbq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6p54i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjy15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5dvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5clo")
+}],
+"loop": 1,
+"name": &"move_down",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iejmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhiud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a4d6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ak7ti")
+}],
+"loop": 1,
+"name": &"move_left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2d1ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgdd1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w31ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fa3o")
+}],
+"loop": 1,
+"name": &"move_right",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu1nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lls8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dor8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t1nqk")
+}],
+"loop": 1,
+"name": &"move_up",
+"speed": 6.0
+}]
+
+[node name="EnemyBabyDragon" unique_id=1203023519 instance=ExtResource("1_syrvq")]
+max_health = 50.0
+damage = 5.0
+exp_amount = 45.0
+loot = Array[ExtResource("2_r02w8")]([SubResource("Resource_se0vk"), SubResource("Resource_febvj"), SubResource("Resource_67633")])
+
+[node name="AnimSprite" parent="." index="1" unique_id=17510422]
+sprite_frames = SubResource("SpriteFrames_b3xbq")
+autoplay = "move_down"
+frame_progress = 0.49950987
+
+[node name="WanderState" parent="FiniteStateMachine" parent_id_path=PackedInt32Array(714796407) index="0" unique_id=1759432846]
+min_move_speed = 10.0
+
+[node name="FollowState" parent="FiniteStateMachine" parent_id_path=PackedInt32Array(714796407) index="1" unique_id=367896654]
+min_move_speed = 30.0
+
+[node name="AttackState" parent="FiniteStateMachine" parent_id_path=PackedInt32Array(714796407) index="2" unique_id=1535355076]
+attack_duration = 1.0
