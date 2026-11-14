@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bmdhnurshgliu" path="res://scenes/enemy/enemy_snake.tscn" id="29_4yhmd"]
 [ext_resource type="PackedScene" uid="uid://oe65bewt8asc" path="res://scenes/enemy/enemy_baby_dragon.tscn" id="30_bjm3s"]
 [ext_resource type="PackedScene" uid="uid://c1oganxyhwad2" path="res://scenes/enemy/enemy_reptile.tscn" id="31_67633"]
+[ext_resource type="PackedScene" uid="uid://dfmouaq1dd6ik" path="res://scenes/npcs/npc_simple.tscn" id="32_67633"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gxugk"]
 texture = ExtResource("1_n11nm")
@@ -4441,6 +4442,11 @@ max_enemies = 6
 position = Vector2(-48.5, 25.5)
 shape = SubResource("RectangleShape2D_bjm3s")
 debug_color = Color(0, 0.6, 0.7019608, 0.19607843)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1678523056]
+
+[node name="NPCSimple" parent="NPCs" unique_id=246602695 instance=ExtResource("32_67633")]
+position = Vector2(-101, -43)
 
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/EquipementButton" to="HUD" method="_on_equipement_button_pressed"]
 [connection signal="pressed" from="HUD/MainButtons/MarginContainer/HBoxContainer/InventoryButton" to="HUD" method="_on_inventory_button_pressed"]

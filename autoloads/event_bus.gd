@@ -8,3 +8,6 @@ signal on_player_new_level(cur_exp: float, new_level: float)
 signal on_player_stats_updated
 
 signal on_inventory_use_item(item: ItemData)
+
+signal on_dialogue_started(Data: DialogueData)
+signal on_dialogue_finished
