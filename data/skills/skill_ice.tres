@@ -1,12 +1,15 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://b2hwu8xwy81"]
 
 [ext_resource type="Texture2D" uid="uid://c8l4airnvei6x" path="res://assets/Sprites/Ui/Skill Icon/Meteo/Snow.png" id="1_3qfqg"]
+[ext_resource type="PackedScene" uid="uid://bi1vys5vdbdnc" path="res://scenes/effects/skill_ice.tscn" id="1_ihc52"]
 [ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_2wah2"]
 
 [resource]
 script = ExtResource("2_2wah2")
 mana_cost = 1.2
 base_damage = 1.8
+explotion_effect = ExtResource("1_ihc52")
+cooldown = 5.0
 icon = ExtResource("1_3qfqg")
 id = "ice"
 name = "Ice"

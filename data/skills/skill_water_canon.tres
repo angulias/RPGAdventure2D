@@ -1,12 +1,15 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://sy0vbihbefcp"]
 
 [ext_resource type="Texture2D" uid="uid://qih0hma7my5e" path="res://assets/Sprites/Ui/Skill Icon/Spell/WaterCanon.png" id="1_4l1nx"]
+[ext_resource type="PackedScene" uid="uid://ctcsxrfrwe8ls" path="res://scenes/effects/skill_water_canon.tscn" id="1_rnptu"]
 [ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_rnptu"]
 
 [resource]
 script = ExtResource("2_rnptu")
 mana_cost = 3.0
 base_damage = 2.4
+explotion_effect = ExtResource("1_rnptu")
+cooldown = 5.5
 icon = ExtResource("1_4l1nx")
 id = "water_canon"
 name = "Water Canon"

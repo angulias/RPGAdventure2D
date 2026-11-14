@@ -1,11 +1,14 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://2b0p6p5r6kqk"]
 
+[ext_resource type="PackedScene" uid="uid://bd62nkvs7m44y" path="res://scenes/effects/skill_magic_weapon.tscn" id="1_bx87y"]
 [ext_resource type="Texture2D" uid="uid://de2d7ac1yxjun" path="res://assets/Sprites/Ui/Skill Icon/Spell/MagicWeapon.png" id="1_jn5gb"]
 [ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_bx87y"]
 
 [resource]
 script = ExtResource("2_bx87y")
 mana_cost = 2.0
+explotion_effect = ExtResource("1_bx87y")
+cooldown = 10.0
 icon = ExtResource("1_jn5gb")
 id = "magic_weapon"
 name = "Magic Weapon"

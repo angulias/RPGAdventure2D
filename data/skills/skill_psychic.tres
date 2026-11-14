@@ -1,12 +1,15 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bgngqenaiwcb6"]
 
 [ext_resource type="Texture2D" uid="uid://cu6gqrp2rtvi1" path="res://assets/Sprites/Ui/Skill Icon/Spell/Alchemy.png" id="1_q34nb"]
+[ext_resource type="PackedScene" uid="uid://ck58liakx53mq" path="res://scenes/effects/skill_psychic.tscn" id="1_wbvc1"]
 [ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_wbvc1"]
 
 [resource]
 script = ExtResource("2_wbvc1")
 mana_cost = 1.5
 base_damage = 2.0
+explotion_effect = ExtResource("1_wbvc1")
+cooldown = 4.0
 icon = ExtResource("1_q34nb")
 id = "psychic"
 name = "Psychic"

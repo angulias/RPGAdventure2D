@@ -17,6 +17,10 @@ var bonus_equipment: Dictionary[String, float] = {
 	"crit_dmg": 0.0
 }
 
+var skill_slots: Array[SkillData] = [null, null, null, null]
+
+var coins: float = 0.0
+
 func apply_bonus_equip(equip_item: EquipData, equipped: bool = true) -> void:
 	if not equip_item: return
 	

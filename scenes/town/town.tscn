@@ -4049,6 +4049,7 @@ size = Vector2(147, 167)
 [node name="Town" type="Node2D" unique_id=629891366]
 script = ExtResource("1_xbtnt")
 player_scene = ExtResource("4_8b7wv")
+testing = true
 
 [node name="Terrain" type="Node2D" parent="." unique_id=1476595582]
 
@@ -4083,8 +4084,9 @@ item = ExtResource("13_s1uhr")
 position = Vector2(141, -111)
 item = ExtResource("14_hhop4")
 
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1052973517]
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1052973517 node_paths=PackedStringArray("skill_buttons")]
 script = ExtResource("9_svnup")
+skill_buttons = [NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton"), NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton2"), NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton3"), NodePath("ActionButtons/MarginContainer/HBoxContainer/EquippedSkillButton4")]
 
 [node name="HealthBar" type="ProgressBar" parent="HUD" unique_id=1101553468]
 custom_minimum_size = Vector2(150, 27)

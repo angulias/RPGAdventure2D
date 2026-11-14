@@ -1,12 +1,15 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://drwivwj1375r7"]
 
 [ext_resource type="Texture2D" uid="uid://bjxem4vjr68t8" path="res://assets/Sprites/Ui/Skill Icon/Spell/OrbPlant.png" id="1_a14w6"]
+[ext_resource type="PackedScene" uid="uid://bx1mbhaa0wspd" path="res://scenes/effects/skill_orb_plant.tscn" id="1_sivbm"]
 [ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_sivbm"]
 
 [resource]
 script = ExtResource("2_sivbm")
 mana_cost = 1.35
 base_damage = 2.0
+explotion_effect = ExtResource("1_sivbm")
+cooldown = 4.6
 icon = ExtResource("1_a14w6")
 id = "orb_plant"
 name = "Orb Plant"

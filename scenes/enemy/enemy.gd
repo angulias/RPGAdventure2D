@@ -43,7 +43,7 @@ func drop_loot() -> void:
 			continue
 		
 		var drop_item: DropItem = Refs.DROP_ITEM_SCENE.instantiate()
-		var random_amount := randi_range(loot_drop.min_amount, loot_drop.amount)
+		var random_amount := randi_range(loot_drop.min_amount, loot_drop.max_amount)
 		
 		var away_direction: Vector2 = (global_position - Refs.player.global_position).normalized()
 		var random_offset: Vector2 = Vector2(randf_range(-8.0, 8.0), randf_range(-8.0, 8.0))

@@ -1,12 +1,15 @@
 [gd_resource type="Resource" script_class="SkillData" format=3 uid="uid://bx4wgay6idh11"]
 
 [ext_resource type="Texture2D" uid="uid://ct4ipm7qta4kp" path="res://assets/Sprites/Ui/Skill Icon/Items & Weapon/Kunai.png" id="1_m3iov"]
+[ext_resource type="PackedScene" uid="uid://vxep2wsxnjdn" path="res://scenes/effects/skill_kunai.tscn" id="1_prn3o"]
 [ext_resource type="Script" uid="uid://dtclsyiojdv7w" path="res://data/skills/skill_data.gd" id="2_prn3o"]
 
 [resource]
 script = ExtResource("2_prn3o")
 mana_cost = 1.5
-base_damage = 2.5
+base_damage = 1.1
+explotion_effect = ExtResource("1_prn3o")
+cooldown = 3.0
 icon = ExtResource("1_m3iov")
 id = "kunai"
 name = "Kunai"

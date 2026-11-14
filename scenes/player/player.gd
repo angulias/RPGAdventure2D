@@ -58,6 +58,7 @@ func _process(delta: float) -> void:
 	if fsm.cur_state:
 		fsm.cur_state.process_state(delta)
 
+
 func setup() -> void:
 	update_total_stats()
 	reset_health()
@@ -81,6 +82,25 @@ func add_mana(value: float) -> void:
 	cur_mana += value
 	cur_mana = min(cur_mana, total_max_mana)
 	EventBus.on_player_mana_updated.emit(cur_mana, total_max_mana)
+
+func use_skill(index: int) -> bool:
+	if index < 0 or index >= GameData.skill_slots.size():
+		return false
+	
+	var skill: SkillData = GameData.skill_slots[index]
+	if not skill: return false
+	if not selected_enemy: return false
+	if cur_mana < skill.mana_cost: return false
+	
+	use_mana(skill.mana_cost)
+	var exp_effect: Node2D = skill.explotion_effect.instantiate()
+	exp_effect.global_position = selected_enemy.global_position
+	get_tree().root.add_child(exp_effect)
+	
+	var total_dmg = get_damage(skill.base_damage)
+	selected_enemy.health_component.take_damage(total_dmg)
+	Refs.create_damage_text(selected_enemy.global_position, total_dmg)
+	return true
 
 func add_exp(value: float) -> void:
 	cur_exp += value
