@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bdit8h2kilqf8"]
+
+[ext_resource type="Texture2D" uid="uid://gb8ugyvoeqct" path="res://assets/Sprites/Actor/Characters/Knight/Faceset.png" id="1_h4u1c"]
+[ext_resource type="Script" uid="uid://b5sumra2h1rtc" path="res://data/dialogue/dialogue_data.gd" id="2_32mf3"]
+
+[resource]
+script = ExtResource("2_32mf3")
+npc_name = "Knight"
+npc_icon = ExtResource("1_h4u1c")
+line = Array[String](["Perilous 'tis to fare alone beyond this mark...", "Yet who am I to stay a man from seeking out his livelihood?"])
+metadata/_custom_type_script = "uid://b5sumra2h1rtc"

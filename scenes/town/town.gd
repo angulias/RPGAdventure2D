@@ -4,9 +4,11 @@ class_name Town
 @export var player_scene: PackedScene
 @export var testing: bool = false
 
+@onready var navigation: TileMapLayer = %Navigation
+
 func _ready() -> void:
 	EventBus.on_inventory_use_item.connect(_on_inventory_use_item)
-	
+	Refs.navigation = navigation
 	if testing: setup_test()
 	
 	create_player()

@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bp1r08w48s5q6"]
 
 [ext_resource type="Script" uid="uid://b5sumra2h1rtc" path="res://data/dialogue/dialogue_data.gd" id="1_2atkj"]
-[ext_resource type="Texture2D" uid="uid://g8hvg0d5rhdi" path="res://assets/Sprites/Actor/Characters/Child/Faceset.png" id="1_n0kmq"]
+[ext_resource type="Texture2D" uid="uid://dclgu4xejljw6" path="res://assets/Sprites/Actor/Characters/Caveman/Faceset.png" id="1_n0kmq"]
 
 [resource]
 script = ExtResource("1_2atkj")
-npc_name = "Testitn"
+npc_name = "Testing"
 npc_icon = ExtResource("1_n0kmq")
 line = Array[String](["Hello", "Bye"])
 metadata/_custom_type_script = "uid://b5sumra2h1rtc"

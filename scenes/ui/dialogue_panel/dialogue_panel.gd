@@ -14,6 +14,18 @@ func _ready() -> void:
 	hide()
 	EventBus.on_dialogue_started.connect(_on_dialogue_started)
 
+func _input(event: InputEvent) -> void:
+	if not visible: return
+	
+	get_tree().paused = true
+	if event.is_action_pressed("ui_accept") or event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		get_viewport().set_input_as_handled()
+		
+		if is_typing:
+			complete_line()
+		else:
+			next_line()
+
 func show_line() -> void:
 	if cur_line_index >= cur_dialogue.line.size():
 		end_dialogue()
@@ -32,7 +44,17 @@ func show_line() -> void:
 	tween.tween_property(dialogue_label, "visible_characters", dialogue_label.text.length(), duration)
 	tween.finished.connect(func(): is_typing = false)
 
+func complete_line() -> void:
+	if tween: tween.kill()
+	dialogue_label.visible_characters = -1
+	is_typing = false
+
+func next_line() -> void:
+	cur_line_index += 1
+	show_line()
+
 func end_dialogue() -> void:
+	get_tree().paused = false
 	hide()
 	cur_dialogue = null
 	EventBus.on_dialogue_finished.emit()

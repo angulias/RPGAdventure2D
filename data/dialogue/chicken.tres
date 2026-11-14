@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bw8jkwwfnukar"]
+
+[ext_resource type="Texture2D" uid="uid://c73d5rt1n3dg0" path="res://assets/Sprites/Actor/Animals/Chicken/FacesetWhite.png" id="1_1iyqq"]
+[ext_resource type="Script" uid="uid://b5sumra2h1rtc" path="res://data/dialogue/dialogue_data.gd" id="2_ov2vq"]
+
+[resource]
+script = ExtResource("2_ov2vq")
+npc_name = "Chicken"
+npc_icon = ExtResource("1_1iyqq")
+line = Array[String](["Coo.. coo... coo"])
+metadata/_custom_type_script = "uid://b5sumra2h1rtc"

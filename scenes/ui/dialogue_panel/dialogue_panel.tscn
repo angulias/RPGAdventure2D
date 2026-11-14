@@ -9,6 +9,7 @@ font_size = 24
 font_color = Color(0, 0, 0, 1)
 
 [node name="DialoguePanel" type="Control" unique_id=908512490]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -37,7 +37,17 @@ animation = &"idle_down"
 autoplay = "idle_down"
 
 [node name="NavAgent" type="NavigationAgent2D" parent="." unique_id=1960837480]
+path_desired_distance = 2.0
+target_desired_distance = 2.0
+path_postprocessing = 1
+debug_path_custom_color = Color(0.61960787, 0.3372549, 0.21568628, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=541211308]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_3f30f")
+
+[node name="Timer" type="Timer" parent="." unique_id=306545458]
+one_shot = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
