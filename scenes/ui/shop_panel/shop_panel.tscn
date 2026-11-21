@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dd51ee340vgoi"]
 
 [ext_resource type="PackedScene" uid="uid://dkx5n6iklsv31" path="res://scenes/ui/shop_panel/shop_button.tscn" id="1_chkkr"]
+[ext_resource type="Script" uid="uid://qtc3f53b0w3e" path="res://scenes/ui/shop_panel/shop_panel.gd" id="1_uw7t7"]
+[ext_resource type="Script" uid="uid://wkfvdfvt7ar8" path="res://data/item_data.gd" id="2_8htdu"]
 [ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://assets/Sprites/Items/Treasure/GoldCoin.png" id="2_vr486"]
+[ext_resource type="Resource" uid="uid://c3p376v3ukdlc" path="res://data/foods/item_food_fish.tres" id="3_d06j1"]
+[ext_resource type="Resource" uid="uid://bsqs6k42ughm3" path="res://data/potions/item_hp_small_2.tres" id="4_lk801"]
+[ext_resource type="Resource" uid="uid://ck714sap0jbwa" path="res://data/potions/item_mana_small_5.tres" id="5_8g7ko"]
+[ext_resource type="Resource" uid="uid://cr5oaf3g2np87" path="res://data/foods/item_food_shrimp.tres" id="6_5uj72"]
+[ext_resource type="Resource" uid="uid://dlurrmc2wmaau" path="res://data/equipments/item_equip_weapon_common.tres" id="7_21wy5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr486"]
 bg_color = Color(0.14901961, 0.16470589, 0.20784314, 1)
@@ -13,6 +20,45 @@ shadow_color = Color(0.101960786, 0.11372549, 0.14901961, 1)
 shadow_size = 2
 shadow_offset = Vector2(4, 4)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ali8"]
+bg_color = Color(0.73333335, 0.15686275, 0.14901961, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.36862746, 0.05490196, 0.050980393, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8htdu"]
+bg_color = Color(0.54907566, 0.10326222, 0.09850394, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.36862746, 0.05490196, 0.050980393, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d06j1"]
+bg_color = Color(0.92989427, 0.25503176, 0.23326337, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.36862746, 0.05490196, 0.050980393, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 4
+
 [node name="ShopPanel" type="Control" unique_id=2050120280]
 layout_mode = 3
 anchors_preset = 15
@@ -20,6 +66,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uw7t7")
+items = Array[ExtResource("2_8htdu")]([ExtResource("3_d06j1"), ExtResource("4_lk801"), ExtResource("5_8g7ko"), ExtResource("6_5uj72"), ExtResource("7_21wy5")])
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=326878733]
 layout_mode = 1
@@ -132,5 +180,21 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="TotalCoins" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1399625447]
+unique_name_in_owner = true
 layout_mode = 2
 text = "20"
+
+[node name="CloseButton" type="Button" parent="." unique_id=2072919977]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 0
+offset_left = 872.0
+offset_top = 193.0
+offset_right = 907.0
+offset_bottom = 228.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_7ali8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8htdu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d06j1")
+text = "X"
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_close_button_pressed"]

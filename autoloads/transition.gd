@@ -8,7 +8,7 @@ func fade_in(duration: float = 0.5) -> void:
 	if tween:
 		tween.kill()
 	
-	get_tree().paused = true
+	EventBus.pause(true)
 	color_rect.material.set_shader_parameter("progress", 0.0)
 	tween = create_tween()
 	tween.tween_property(color_rect.material, "shader_parameter/progress", 1.0, duration)
@@ -18,7 +18,7 @@ func fade_out(duration: float = 0.5) -> void:
 	if tween:
 		tween.kill()
 	
-	get_tree().paused = false
+	EventBus.pause(false)
 	color_rect.material.set_shader_parameter("progress", 1.0)
 	tween = create_tween()
 	tween.tween_property(color_rect.material, "shader_parameter/progress", 0.0, duration)

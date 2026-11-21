@@ -6,10 +6,12 @@ class_name Town
 
 @onready var navigation: TileMapLayer = %Navigation
 
+func _enter_tree() -> void:
+	if testing: setup_test()
+
 func _ready() -> void:
 	EventBus.on_inventory_use_item.connect(_on_inventory_use_item)
 	Refs.navigation = navigation
-	if testing: setup_test()
 	
 	create_player()
 

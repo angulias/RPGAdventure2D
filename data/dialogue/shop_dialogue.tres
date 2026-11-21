@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://dgswyq7plowyu"]
+
+[ext_resource type="Texture2D" uid="uid://dkdqf3xg6ba3l" path="res://assets/Sprites/Actor/Characters/Inspector/Faceset.png" id="1_3ruru"]
+[ext_resource type="Script" uid="uid://b5sumra2h1rtc" path="res://data/dialogue/dialogue_data.gd" id="1_ihs76"]
+
+[resource]
+script = ExtResource("1_ihs76")
+npc_name = "Inspector"
+npc_icon = ExtResource("1_3ruru")
+line = Array[String](["Enter, thou welcome guest, and let mine humble shop unfold its wares before thee.", "I pray some trinket here may please thine eye and prove a treasure to thy heart."])
+metadata/_custom_type_script = "uid://b5sumra2h1rtc"

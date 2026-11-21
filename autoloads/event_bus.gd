@@ -11,3 +11,6 @@ signal on_inventory_use_item(item: ItemData)
 
 signal on_dialogue_started(Data: DialogueData)
 signal on_dialogue_finished
+
+func pause(value: bool) -> void:
+	get_tree().paused = value

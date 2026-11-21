@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://ms6ia438aedt" path="res://scenes/drop_item/drop_item.tscn" id="20_vky2r"]
 [ext_resource type="Resource" uid="uid://bsqs6k42ughm3" path="res://data/potions/item_hp_small_2.tres" id="21_fwdo8"]
 [ext_resource type="PackedScene" uid="uid://gw3n85iawym3" path="res://scenes/ui/inventory_panel/inventory_slot.tscn" id="22_fwdo8"]
+[ext_resource type="PackedScene" uid="uid://dd51ee340vgoi" path="res://scenes/ui/shop_panel/shop_panel.tscn" id="24_88c50"]
 [ext_resource type="PackedScene" uid="uid://s8qngjo8b4et" path="res://scenes/ui/dialogue_panel/dialogue_panel.tscn" id="26_4axs1"]
 [ext_resource type="Script" uid="uid://c50ahxten4p5s" path="res://scenes/enemy/enemy_zone.gd" id="26_o16h7"]
 [ext_resource type="PackedScene" uid="uid://casmicpqro64k" path="res://scenes/enemy/enemy_mouse.tscn" id="27_iu42p"]
@@ -30,15 +31,19 @@
 [ext_resource type="PackedScene" uid="uid://oe65bewt8asc" path="res://scenes/enemy/enemy_baby_dragon.tscn" id="30_bjm3s"]
 [ext_resource type="PackedScene" uid="uid://c1oganxyhwad2" path="res://scenes/enemy/enemy_reptile.tscn" id="31_67633"]
 [ext_resource type="PackedScene" uid="uid://dfmouaq1dd6ik" path="res://scenes/npcs/npc_simple.tscn" id="32_67633"]
+[ext_resource type="Resource" uid="uid://b2h1it38ofm26" path="res://data/dialogue/simple.tres" id="32_lgkob"]
 [ext_resource type="PackedScene" uid="uid://dspk1y2xafx4x" path="res://scenes/npcs/npc_fighter_red.tscn" id="33_n51ow"]
 [ext_resource type="PackedScene" uid="uid://d0sjxhbxi57u7" path="res://scenes/npcs/npc_chicken.tscn" id="34_h8fnw"]
-[ext_resource type="Resource" uid="uid://bp1r08w48s5q6" path="res://data/dialogue/testing.tres" id="34_sv8qu"]
+[ext_resource type="Resource" uid="uid://bw8jkwwfnukar" path="res://data/dialogue/chicken.tres" id="35_4jv80"]
 [ext_resource type="PackedScene" uid="uid://cyguryg5p1jwd" path="res://scenes/npcs/npc_ninja_dark.tscn" id="35_lgueu"]
 [ext_resource type="PackedScene" uid="uid://cidg3ro2vtitl" path="res://scenes/npcs/npc_monk.tscn" id="36_8qmit"]
 [ext_resource type="PackedScene" uid="uid://4080j4x56ox5" path="res://scenes/npcs/npc_samurai_blue.tscn" id="37_lgueu"]
 [ext_resource type="PackedScene" uid="uid://btfmyt4183dyc" path="res://scenes/npcs/npc_knight.tscn" id="38_8qmit"]
 [ext_resource type="PackedScene" uid="uid://b8byptbwh23wk" path="res://scenes/town/portal.tscn" id="39_1d5la"]
 [ext_resource type="PackedScene" uid="uid://cijyjx1g00uon" path="res://scenes/npcs/npc_fighter.tscn" id="39_486pw"]
+[ext_resource type="PackedScene" uid="uid://18kyr2ehpy5" path="res://scenes/npcs/npc_trader.tscn" id="40_2e0dp"]
+[ext_resource type="Resource" uid="uid://bdit8h2kilqf8" path="res://data/dialogue/knight.tres" id="40_v43t5"]
+[ext_resource type="Resource" uid="uid://dgswyq7plowyu" path="res://data/dialogue/shop_dialogue.tres" id="41_lgkob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v00pm"]
 texture = ExtResource("4_06row")
@@ -1598,6 +1603,10 @@ flat = true
 [node name="DialoguePanel" parent="HUD" unique_id=908512490 instance=ExtResource("26_4axs1")]
 visible = false
 
+[node name="ShopPanel" parent="HUD" unique_id=2050120280 instance=ExtResource("24_88c50")]
+process_mode = 3
+visible = false
+
 [node name="EnemyZones" type="Node2D" parent="." unique_id=243758492]
 
 [node name="Zone_1" type="Area2D" parent="EnemyZones" unique_id=341085157]
@@ -1661,7 +1670,7 @@ debug_color = Color(0, 0.6, 0.7019608, 0.19607843)
 
 [node name="NPCSimple" parent="NPCs" unique_id=246602695 instance=ExtResource("32_67633")]
 position = Vector2(-104, -40)
-dialogue = ExtResource("34_sv8qu")
+dialogue = ExtResource("32_lgkob")
 
 [node name="NPCFighterRed" parent="NPCs" unique_id=1590704154 instance=ExtResource("33_n51ow")]
 position = Vector2(128, -128)
@@ -1670,6 +1679,7 @@ can_move = true
 [node name="NPCChicken" parent="NPCs" unique_id=1836965419 instance=ExtResource("34_h8fnw")]
 position = Vector2(-120, -40)
 scale = Vector2(0.7, 0.7)
+dialogue = ExtResource("35_4jv80")
 
 [node name="NPCNinjaDark" parent="NPCs" unique_id=335316977 instance=ExtResource("35_lgueu")]
 position = Vector2(-176, -24)
@@ -1682,9 +1692,14 @@ position = Vector2(48, -8)
 
 [node name="NPCKnight" parent="NPCs" unique_id=1422331121 instance=ExtResource("38_8qmit")]
 position = Vector2(88, -88)
+dialogue = ExtResource("40_v43t5")
 
 [node name="NPCFighter" parent="NPCs" unique_id=627189313 instance=ExtResource("39_486pw")]
 position = Vector2(136, 64)
+
+[node name="NPCTrader" parent="NPCs" unique_id=1134166277 instance=ExtResource("40_2e0dp")]
+position = Vector2(-89, -1239)
+dialogue = ExtResource("41_lgkob")
 
 [node name="TownPortal" parent="." unique_id=425329083 node_paths=PackedStringArray("target_pos") instance=ExtResource("39_1d5la")]
 target_pos = NodePath("../TargetPositions/ShopInteriorPos")

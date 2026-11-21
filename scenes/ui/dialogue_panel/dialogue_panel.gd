@@ -17,7 +17,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if not visible: return
 	
-	get_tree().paused = true
+	EventBus.pause(true)
 	if event.is_action_pressed("ui_accept") or event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		get_viewport().set_input_as_handled()
 		
@@ -54,7 +54,7 @@ func next_line() -> void:
 	show_line()
 
 func end_dialogue() -> void:
-	get_tree().paused = false
+	EventBus.pause(false)
 	hide()
 	cur_dialogue = null
 	EventBus.on_dialogue_finished.emit()

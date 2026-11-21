@@ -14,6 +14,7 @@ class_name HUD
 @onready var inventory_panel: InventoryPanel = %InventoryPanel
 @onready var stats_panel: StatsPanel = %StatsPanel
 @onready var skills_panel: SkillsPanel = %SkillsPanel
+@onready var shop_panel: Control = $ShopPanel
 
 @onready var grabbed_slot: InventorySlot = $GrabbedSlot
 
@@ -52,8 +53,11 @@ func equip_skill_to_empty_slot(skill: SkillData) -> void:
 			GameData.skill_slots[i] = skill
 			return
 
-#TODO la decision de usar una skill la restringe el hud que es el que tiene la vinculación con
-#la pantalla y el input map, es decir, el cooldown de las skills lo marca el hud, no el player
+func open_npc_panel(type: NPC.NPCType) -> void:
+	EventBus.pause(true)
+	match type:
+			NPC.NPCType.SHOP:
+				shop_panel.show()
 
 func _on_equipement_button_pressed() -> void:
 	equipment_panel.visible = not equipment_panel.visible

@@ -53,6 +53,12 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		if dialogue:
 			EventBus.on_dialogue_started.emit(dialogue)
+			if type != NPCType.IDLE:
+				await EventBus.on_dialogue_finished
+				Refs.hud.open_npc_panel(type)
+		else:
+			if type != NPCType.IDLE:
+				Refs.hud.open_npc_panel(type)
 
 func set_new_target() -> void:
 	if not Refs.navigation: return
