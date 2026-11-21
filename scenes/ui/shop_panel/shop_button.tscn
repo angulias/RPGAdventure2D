@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dkx5n6iklsv31"]
+
+[ext_resource type="Texture2D" uid="uid://tfa5nvtpmise" path="res://assets/Sprites/Items/Food/Shrimp.png" id="1_up7pt"]
+[ext_resource type="Texture2D" uid="uid://dbfg8jvijdjdb" path="res://assets/Sprites/Items/Treasure/GoldCoin.png" id="2_pc0aj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ali8"]
+bg_color = Color(0.21960784, 0.23137255, 0.2901961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ixrni"]
+bg_color = Color(0.16470589, 0.1764706, 0.22352941, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qbvl1"]
+bg_color = Color(0.30622724, 0.32122168, 0.3958199, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="ShopButton" type="Button" unique_id=889961750]
+custom_minimum_size = Vector2(80, 80)
+theme_override_styles/normal = SubResource("StyleBoxFlat_7ali8")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ixrni")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qbvl1")
+
+[node name="ItemIcon" type="TextureRect" parent="." unique_id=858269365]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -30.0
+offset_right = 20.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_up7pt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1145612156]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=2049305758]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+texture = ExtResource("2_pc0aj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1033191021]
+layout_mode = 2
+text = "20"
