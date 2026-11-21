@@ -288,6 +288,7 @@ layout_mode = 2
 
 [node name="MaterialsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=535413872]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 

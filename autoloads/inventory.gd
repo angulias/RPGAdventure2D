@@ -45,6 +45,13 @@ func get_slot_item(index: int) -> ItemData:
 	if slot:
 		return slot.item
 	return null
+
+func count_item(item: ItemData) -> int:
+	var total: int = 0
+	for slot in inventory:
+		if slot and slot.item == item:
+			total += 1
+	return total
 #endregion
 
 #region Add / Remove
