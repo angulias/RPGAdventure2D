@@ -69,7 +69,7 @@ grow_vertical = 2
 script = ExtResource("1_uw7t7")
 items = Array[ExtResource("2_8htdu")]([ExtResource("3_d06j1"), ExtResource("4_lk801"), ExtResource("5_8g7ko"), ExtResource("6_5uj72"), ExtResource("7_21wy5")])
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=326878733]
+[node name="BG" type="ColorRect" parent="." unique_id=326878733]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

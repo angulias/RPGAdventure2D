@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dehu3pa8wfyv8"]
+
+[ext_resource type="Texture2D" uid="uid://bh25ayt3werxw" path="res://assets/Sprites/Items/Potion/Medipack.png" id="1_6lspg"]
+[ext_resource type="Script" uid="uid://wkfvdfvt7ar8" path="res://data/item_data.gd" id="1_gfblv"]
+
+[resource]
+script = ExtResource("1_gfblv")
+type = 2
+is_consumable = true
+value = 20.0
+icon = ExtResource("1_6lspg")
+id = "hp_potion"
+name = "Medipack"
+description = "What doth a traveller bear, who knoweth not what perils shall befall him, but a humble kit of leech-craft — the barest store of salves and swathings, just enough to mend what fortune's malice may inflict upon the road?"
+price = 100
+metadata/_custom_type_script = "uid://wkfvdfvt7ar8"
